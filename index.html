@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main page</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="homepage.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav class="top-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cabins.html">Cabins</a></li>
+          <li>Contact</li>
+          <li>Book</li>
+          <li>About Us</li>
+        </ul>
+      </nav>
+      <div class="hero-container">
+        <video autoplay muted loop playsinline>
+          <source src="b&b-images/hero-video.mp4" type="video/mp4" />
+        </video>
+        <div id="hero-overlay"></div>
+        <div class="hero-logo">
+          <img
+            src="b&b-images/graphics/SVG/Asset 1.svg"
+            alt=""
+            id="hero-logo-image"
+          />
+
+          <div class="hero-logo-title">
+            <img
+              src="b&b-images/graphics/sjöstugan-title.png"
+              alt=""
+              id="hero-sjöstugan"
+            />
+            <img src="b&b-images/graphics/B&B-title.png" alt="" id="hero-b&b" />
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="introduction-section">
+      <div class="introduction-image4">
+        <img src="b&b-images/raspberries.jpg" alt="" />
+      </div>
+      <div class="introduction-image2">
+        <img id="introduction-image2" src="b&b-images/yard.jpg" alt="" />
+      </div>
+      <div class="introduction-image3">
+        <img id="introduction-image3" src="b&b-images/lake-view.jpg" alt="" />
+      </div>
+      <div class="introduction-image1">
+        <img
+          id="introduction-image1"
+          src="b&b-images/cabin-meadow.jpg"
+          alt=""
+        />
+      </div>
+
+      <div class="introduction-text">
+        <span
+          >Family owned bed and breakfast offering fully equipt cabins in the
+          heart of Dalecarlia.</span
+        >
+        <span>
+          Enjoy a traditional swedish breakfast looking out over the idyllic
+          lake Siljan after a restful night of sleep.
+        </span>
+      </div>
+    </div>
+    <div id="introduction-kurbits">
+      <img src="b&b-images/graphics/kurbits-blå.png" alt="" />
+    </div>
+    <div class="cabin-page">
+      <h2>Our Cabins</h2>
+      <p>
+        We have 5 fully equipt cabins on our property and In total 30 available
+        beds. From our cozy 2 person hut to the Storstuga housing up to 8
+        people. We have something for everyone- find which cabin is perfect for
+        your getaway.
+      </p>
+      <a class=nav-link href="cabins.html">Check out all of our available accommodations → </a>
+      <a href="cabins.html" id="cabin-images-1">
+        <img src="b&b-images/lantern-cabin.jpg" alt="" />
+      </a>
+      <a href="cabins.html" id="cabin-images-2">
+        <img src="b&b-images/lantern-cabin.jpg" alt=""
+      /></a>
+    </div>
+    <div class="breakfast-section">
+      <div class="overlay">
+        <div class="breakfast-info">
+          <p>Our homemade breakfast is included in every stay.</p>
+          <h4>Everyday 7-11 am</h4>
+        </div>
+      </div>
+    </div>
+    <div class="explore">
+      <h2>Explore the area</h2>
+      <div class="explore-lake">
+        <img src="b&b-images/lake-boat.jpg" alt="" />
+        <p>Rent a boat for a day on the lake</p>
+      </div>
+      <div class="explore-hike">
+        <img src="b&b-images/njupeskär-hike.jpg" alt="" />
+        <p>Hiking trails for all levels</p>
+      </div>
+      <div class="explore-midsommar">
+        <img src="b&b-images/midsommar.jpg" alt="" />
+        <p>Experience a traditional midsummer celebration</p>
+      </div>
+      <div class="explore-rättvik">
+        <img src="b&b-images/rättvik-pir.jpg" alt="" />
+        <p>Rättvik pier</p>
+      </div>
+    </div>
+    <div class="reviews">
+      <h3>What our guests have said</h3>
+    </div>
+    <footer>
+      <img id="footer-logo" src="b&b-images/graphics/sjöstugan.png" />
+      <div class="location-row">
+        <h3>Location</h3>
+        <p>Address, adress</p>
+      </div>
+      <div class="contact-row">
+        <h3>Contact</h3>
+        <ul>
+          <li>sjöstugan@gmail.com</li>
+          <li>+46 xxxxxxx</li>
+        </ul>
+        <div class="social-icons">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95"
+            />
+          </svg>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,197 @@
+.top-menu {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0)
+  );
+  /*backdrop-filter: blur(10px);*/
+}
+
+.cabin-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto repeat(5, auto);
+  row-gap: 20px;
+}
+
+.cabin-grid h1 {
+  grid-row: 1;
+  grid-column: 2 / span 6;
+  font-size: 98pt;
+  color: #cc6e58;
+  z-index: 2;
+  margin-bottom: 2vh;
+}
+
+#cabin-kurbits {
+  position: fixed;
+  top: 100px;
+  right: 100px;
+  opacity: 0.3;
+
+  width: 700px;
+  height: 300px;
+  transform: rotate(30deg);
+  z-index: -2;
+}
+
+#cabin-kurbits img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cabin-grid h2 {
+  font-size: 4vw;
+  color: #cc6e58;
+}
+
+.cabin-grid,
+p,
+h3 {
+  color: #67372b;
+}
+
+.cabin-grid h3 {
+  margin-top: 0;
+}
+
+.cabin-grid a {
+  color: #cc6e58;
+}
+
+.cabin-image-container {
+  width: 25vw;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  z-index: 2;
+  grid-row: 2;
+  grid-column: 1 / span 3;
+  margin-left: -50px;
+  overflow: hidden;
+}
+
+.cabin-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cabin {
+  grid-column: 2 / span 8;
+  background-color: #f2e2d8;
+
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: auto auto;
+  column-gap: 2vw;
+
+  border: 8px solid #4f728a;
+  position: relative;
+  padding-bottom: 4vh;
+}
+
+/*Partial border tutorial
+https://www.google.com/search?q=partial+frame+border+css&oq=partial+frame+border+css&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDY5MjBqMGo5qAIGsAIB8QUPgST6rAE-Sw&sourceid=chrome&ie=UTF-8#fpstate=ive&vld=cid:59d9ef1f,vid:tNwncxl8EbA,st:0*/
+
+.cabin:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 200px;
+  left: -50px;
+  border: 50px solid #f2e2d8;
+}
+
+#lillstugan {
+  grid-row: 2;
+}
+
+#storstugan {
+  grid-row: 3;
+}
+
+#björkstugan {
+  grid-row: 4;
+}
+
+#torpet {
+  grid-row: 5;
+}
+
+#ladan {
+  grid-row: 6;
+}
+
+.cabin h2 {
+  grid-row: 1;
+  grid-column: 1 / span 10;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  z-index: 2;
+  margin-left: -50px;
+}
+
+.cabin-text {
+  grid-row: 2;
+  grid-column: 4 / span 6;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.button {
+  background-color: #cc6e58;
+  border-radius: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.cabin-right {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: auto auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  border: 8px solid #4f728a;
+  position: relative;
+  padding-bottom: 24px;
+}
+
+.cabin-icons {
+  display: flex;
+  flex-direction: row;
+  column-gap: 16px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.cabin-icons svg {
+  width: 2vw;
+  height: auto;
+  object-fit: cover;
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+/*Border*/
+
+.cabin:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 200px;
+  right: 50px;
+  border: 50px solid #f2e2d8;
+}

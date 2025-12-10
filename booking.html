@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking page</title>
+  </head>
+  <body>
+    <div class="booking">
+      <div class="booking-container">
+        <h2>Interest form</h2>
+        <form action="/submit" method="POST">
+          <input
+            type="text"
+            id="first-name"
+            name="first-name"
+            placeholder="First Name *"
+            required
+          />
+          <input
+            type="text"
+            id="last-name"
+            name="last-name"
+            placeholder="Last Name *"
+            required
+          />
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email *"
+            required
+          />
+          <input
+            type="tel"
+            id="phonenumber"
+            name="phonenumber"
+            placeholder="Phone Number"
+          />
+          <div class="date-container">
+            <label for="arrival-date">Arrival date:</label>
+            <input type="date" id="arrival-date" name="arrival-date" />
+          </div>
+          <div class="date-container">
+            <label for="departure-date">Departure date:</label>
+            <input type="date" id="departure-date" name="departure-date" />
+          </div>
+          <select id="cabin-choice" name="cabin-choice">
+            <option value="" disabled selected>Cabin of interest *</option>
+            <option value="1">Lillstugan</option>
+            <option value="2">Storstugan</option>
+            <option value="3">3</option>
+            <option value="4">Torpet</option>
+            <option value="5">Ladan</option>
+          </select>
+          <select id="cabin-second-choice" name="cabin-second-choice">
+            <option value="" disabled selected>
+              Second choice (if unavailable)*
+            </option>
+            <option value="1">Lillstugan</option>
+            <option value="2">Storstugan</option>
+            <option value="3">3</option>
+            <option value="4">Torpet</option>
+            <option value="5">Ladan</option>
+            <option value="OnlyFirstChoice">
+              I'm only interested in my first choice
+            </option>
+          </select>
+
+          <label for="number-of-guests">Number of Guests</label>
+          <select id="number-of-guests" name="number-of-guests">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            cols="50"
+            placeholder="Additional Message"
+          ></textarea>
+
+          <div class="submit-container">
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
