@@ -206,5 +206,38 @@ document.getElementById("multiStepForm").addEventListener("submit", (e) => {
 
 updateUI();
 
-
 // Prefill room selection
+
+const selectedOption = document.querySelectorAll('input[name="room"]:checked');
+
+if (window.location.href.includes("storstugan")) {
+  const storstugan = document.querySelector("#storstugan");
+
+  if (storstugan) {
+    storstugan.checked = true;
+  }
+} else if (window.location.href.includes("lillstugan")) {
+  const lillstugan = document.querySelector("#lillstugan");
+
+  if (lillstugan) {
+    lillstugan.checked = true;
+  }
+} else if (window.location.href.includes("björkstugan")) {
+  const björkstugan = document.querySelector("#björkstugan");
+
+  if (björkstugan) {
+    björkstugan.checked = true;
+  }
+} else if (window.location.href.includes("torpet")) {
+  const torpet = document.querySelector("#torpet");
+
+  if (torpet) {
+    torpet.checked = true;
+  }
+} else if (window.location.href.includes("ladan")) {
+  const ladan = document.querySelector("#ladan");
+
+  if (ladan) {
+    ladan.checked = true;
+  }
+}
