@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ease: "none",
     },
     scrollTrigger: {
-      trigger: ".container",
+      trigger: ".cabin",
       start: "top top",
       end: "+1000",
       scrub: 2,
@@ -43,9 +43,32 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   scrollTrigger.create({
-    trigger: ".container",
+    trigger: ".cabin",
     start: "top top",
     end: "",
     invalidateOnRefresh: true,
+  });
+});
+
+document.addEventListener("DOMContentLoaded", (event) => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  const exploreContainer = document.querySelector("#explore-container");
+
+  gsap.set(exploreContainer, {
+    opacity: 0,
+    y: 50,
+  });
+
+  gsap.to(exploreContainer, {
+    opacity: 1,
+    y: 0,
+    duration: 2,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: exploreContainer,
+      start: "top 80%",
+      once: true,
+    },
   });
 });
