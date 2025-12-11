@@ -11,7 +11,13 @@
       href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <script src="global.js" defer></script>
     <script src="homepage.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+    <!-- ScrollSmoother requires ScrollTrigger -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollSmoother.min.js"></script>
   </head>
   <body>
     <header>
@@ -20,7 +26,7 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="cabins.html">Cabins</a></li>
           <li>Contact</li>
-          <li>Book</li>
+          <li><a href="/booking.html">Book</a></li>
           <li>About Us</li>
         </ul>
       </nav>
@@ -35,45 +41,37 @@
             alt=""
             id="hero-logo-image"
           />
-
-          <div class="hero-logo-title">
+          <!-- <div class="hero-logo-title">
             <img
               src="b&b-images/graphics/sjöstugan-title.png"
               alt=""
               id="hero-sjöstugan"
             />
             <img src="b&b-images/graphics/B&B-title.png" alt="" id="hero-b&b" />
-          </div>
+          </div>-->
         </div>
       </div>
     </header>
     <div class="introduction-section">
-      <div class="introduction-image4">
-        <img src="b&b-images/raspberries.jpg" alt="" />
-      </div>
-      <div class="introduction-image2">
-        <img id="introduction-image2" src="b&b-images/yard.jpg" alt="" />
-      </div>
-      <div class="introduction-image3">
-        <img id="introduction-image3" src="b&b-images/lake-view.jpg" alt="" />
-      </div>
-      <div class="introduction-image1">
-        <img
-          id="introduction-image1"
-          src="b&b-images/cabin-meadow.jpg"
-          alt=""
-        />
-      </div>
-
-      <div class="introduction-text">
-        <span
-          >Family owned bed and breakfast offering fully equipt cabins in the
-          heart of Dalecarlia.</span
-        >
-        <span>
-          Enjoy a traditional swedish breakfast looking out over the idyllic
-          lake Siljan after a restful night of sleep.
-        </span>
+      <div class="vertical-scroll">
+        <div class="column" class="introduction-images">
+          <div class="left-column">
+            <!--<img id="introduction-image" src="b&b-images/sunrise.png" alt="" />-->
+          </div>
+        </div>
+        <div class="column" class="introduction-text">
+          <div class="right-column">
+            <h2>
+              Family run bed and breakfast<br />
+              In the heart of Dalecarlia
+            </h2>
+            <span>
+              Wake up to a traditional Swedish breakfast overlooking the idyllic
+              Lake Siljan. Your unforgettable escape starts here. Explore our
+              fully equipped cabins and book your restful retreat.
+            </span>
+          </div>
+        </div>
       </div>
     </div>
     <div id="introduction-kurbits">
@@ -87,9 +85,11 @@
         people. We have something for everyone- find which cabin is perfect for
         your getaway.
       </p>
-      <a class=nav-link href="cabins.html">Check out all of our available accommodations → </a>
+      <a class="nav-link" href="cabins.html"
+        >Check out all of our available accommodations →
+      </a>
       <a href="cabins.html" id="cabin-images-1">
-        <img src="b&b-images/lantern-cabin.jpg" alt="" />
+        <img src="b&b-images/cabin-bedroom.jpg" alt="" />
       </a>
       <a href="cabins.html" id="cabin-images-2">
         <img src="b&b-images/lantern-cabin.jpg" alt=""
