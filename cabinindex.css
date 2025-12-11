@@ -57,7 +57,7 @@ h3 {
 }
 
 .cabin-grid a {
-  color: #cc6e58;
+  color: #a7362a;
 }
 
 .cabin-image-container {
@@ -86,7 +86,7 @@ h3 {
   grid-template-rows: auto auto;
   column-gap: 2vw;
 
-  border: 8px solid #4f728a;
+  border: 8px solid rgb(204, 110, 88, 0.5);
   position: relative;
   padding-bottom: 4vh;
 }
@@ -131,7 +131,7 @@ https://www.google.com/search?q=partial+frame+border+css&oq=partial+frame+border
   margin-top: 10px;
   z-index: 2;
   margin-left: -50px;
-  color: #4f728a;
+  color: #a7362a;
 }
 
 .cabin-text {

@@ -62,7 +62,7 @@ body {
   height: 100vh;
   position: relative;
   overflow: hidden;
-  margin-bottom: 16vh;
+  margin-bottom: 8vh;
 }
 
 .hero-container video {
@@ -109,46 +109,49 @@ body {
 
 /*Introdution section*/
 
-.vertical-scroll {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 80vh;
-  overflow: hidden;
-}
-
-.right-column {
-  will-change: transform;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 60vw;
-}
-
-.right-column h2,
-.right-column span {
-  width: 100%;
-  text-align: left;
-}
-
-.left-column {
-  width: 40vw;
+.introduction-section {
   background-image: url(b&b-images/sunrise.png);
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
   background-position: center;
+  height: 60vh;
+  justify-content: center;
+  margin-left: 4vw;
+  margin-right: 4vw;
+}
+
+.vertical-scroll {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
   height: 100%;
+  overflow: hidden;
+}
+
+.text-column {
+  will-change: transform;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  justify-content: center;
+}
+
+.text-column h2,
+.text-column span {
+  width: 100%;
+  text-align: left;
 }
 
 .introduction-section h2 {
-  color: #67372b;
+  color: white;
   font-size: 3vw;
 }
 
-.introduction-text span {
-  color: #67372b;
+.introduction-section span {
+  color: white;
 }
 
 .introduction-images img {

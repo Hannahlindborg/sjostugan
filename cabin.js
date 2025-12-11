@@ -54,3 +54,26 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   scrollToHash(window.location.hash);
 });
+
+document.addEventListener("DOMContentLoaded", (event) => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  const amenitiesContainer = document.querySelector(".amenities");
+
+  gsap.set(amenitiesContainer, {
+    opacity: 0,
+    y: 50,
+  });
+
+  gsap.to(amenitiesContainer, {
+    opacity: 1,
+    y: 0,
+    duration: 2,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: amenitiesContainer,
+      start: "top 80%",
+      once: true,
+    },
+  });
+});

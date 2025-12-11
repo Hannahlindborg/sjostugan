@@ -111,7 +111,7 @@
 
 .amenities-container {
   grid-column: 2 / span 10;
-  border: 8px solid #4f728a;
+  border: 8px solid rgb(79, 114, 138, 0.5);
   position: relative;
   z-index: -2;
   background-color: #f2e2d8;

@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const verticalScroll = document.querySelector(".vertical-scroll");
   //const leftColumn = document.querySelector(".left-column");
-  const rightColumn = document.querySelector(".right-column");
+  const textColumn = document.querySelector(".text-column");
 
   const tl = gsap.timeline({
     defaults: {
@@ -36,8 +36,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   tl.fromTo(
-    rightColumn,
-    { y: () => verticalScroll.offsetHeight - rightColumn.offsetHeight },
+    textColumn,
+    { y: () => verticalScroll.offsetHeight - textColumn.offsetHeight },
     { y: 0 },
     "start"
   );
