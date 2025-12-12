@@ -9,6 +9,11 @@ body {
   margin: 0;
 }
 
+h1 {
+  color: #cc6e58;
+  font-size: 16vh;
+}
+
 /*Menu*/
 
 .top-menu {
@@ -240,6 +245,7 @@ body {
   text-decoration: none;
   padding-bottom: 1vh;
   border-bottom: 2px solid #cc6e58;
+  color: #cc6e58;
 
   transition: border-color 0.3s ease, transform 0.3s ease;
 }

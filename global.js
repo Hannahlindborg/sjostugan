@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
   let slideIndex = 1;
   showSlides(slideIndex);
 
-  // Make global so HTML onclick works
   window.plusSlides = function (n) {
     showSlides((slideIndex += n));
   };
