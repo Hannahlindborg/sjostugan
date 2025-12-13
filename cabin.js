@@ -6,18 +6,25 @@ document.addEventListener("DOMContentLoaded", function () {
   const mainImage = document.getElementById("main-image");
   const thumbnails = document.querySelectorAll(".thumbnail-grid img");
 
+  mainImage.addEventListener("animationend", () => {
+    mainImage.classList.remove("animation");
+  });
+
   thumbnails.forEach((img) => {
     img.addEventListener("click", () => {
-      // 1. Change main image
+      mainImage.classList.remove("animation");
+
+      mainImage.classList.add("animation");
+
       const largeSrc = img.dataset.largesrc || img.src;
       mainImage.src = largeSrc;
 
-      // 2. Remove active class
       thumbnails.forEach((t) => t.classList.remove("thumbnail-active"));
 
-      // 3. Add active class to clicked thumbnail
       img.classList.add("thumbnail-active");
     });
+
+    mainImage.classList.add("animation");
   });
 });
 

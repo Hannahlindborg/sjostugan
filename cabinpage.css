@@ -63,6 +63,21 @@
   object-fit: cover;
 }
 
+#main-image.animation {
+  animation: 1s fadeIn ease-in;
+}
+
+/*Image fade in animation*/
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .thumbnail-grid {
   grid-column: 8 / span 3;
   display: flex;
