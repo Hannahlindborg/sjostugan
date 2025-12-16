@@ -1,8 +1,9 @@
 /*Global styles*/
 body {
-  background-color: #f2e2d8;
+  background-color: #ffeee3;
   background-blend-mode: overlay;
   margin: 0;
+  font-size: 16px;
 }
 /*
 .lato-thin {
@@ -74,6 +75,14 @@ body {
 }
 */
 
+html.is-changing .transition-main {
+  transition: opacity 250ms ease-in-out;
+}
+
+html.is-animating .transition-main {
+  opacity: 0;
+}
+
 h1 {
   color: #cc6e58;
   font-size: 28vh;
@@ -108,7 +117,7 @@ p {
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;
-  font-size: ;
+  font-size: 1rem;
 }
 
 /*Menu*/
@@ -386,7 +395,7 @@ p {
 }
 
 .nav-link:hover {
-  border-color: #f2e2d8;
+  border-color: #ffeee3;
   transform: scale(1.02);
 }
 
@@ -568,7 +577,7 @@ https://www.w3schools.com/howto/howto_js_slideshow.asp*/
 .testimonials {
   position: relative;
   padding: 20px 20px;
-  background-color: #f2e2d8;
+  background-color: #ffeee3;
   border: 8px solid #4f728a;
   border-radius: 16px;
   margin-left: 3vw;
@@ -584,7 +593,7 @@ https://www.w3schools.com/howto/howto_js_slideshow.asp*/
   width: 650px;
   height: 50px;
   top: -20px;
-  border: 50px solid #f2e2d8;
+  border: 50px solid #ffeee3;
   z-index: -1;
 }
 
@@ -644,7 +653,7 @@ footer {
   width: 100%;
   height: 100%;
   color: #f2e2d8;
-  align-items: start;
+  align-items: center;
   justify-content: center;
   margin-top: 20px;
   z-index: 1;
@@ -669,11 +678,19 @@ footer h4 {
   opacity: 60%;
 }
 
+.footer-information {
+  grid-column: 6 / span 4;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
 .contact-row {
-  grid-column: 6 / span 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
 }
 
 .contact-row ul {
@@ -688,21 +705,20 @@ footer h4 {
 }
 
 .socials-row {
-  grid-column: 9 / span 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
 }
 
 .social-icons {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
 }
 
 .social-icon-container {
-  width: 20%;
-  height: 20%;
+  width: 100%;
+  height: 100%;
   aspect-ratio: 1/1;
 }
 
@@ -723,7 +739,7 @@ footer h4 {
 .form-container {
   max-width: 520px;
   margin: auto;
-  background: #f2e2d8;
+  background: #ffeee3;
   border: 8px solid #67372b;
   border-radius: 16px;
   padding: 24px;
@@ -831,7 +847,7 @@ textarea {
   border-radius: 10px;
   border: 1px solid #67372b;
   font-size: 14px;
-  background-color: #f2e2d8;
+  background-color: #ffeee3;
 }
 
 input:focus,

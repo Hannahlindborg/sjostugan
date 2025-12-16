@@ -1,24 +1,39 @@
+export function initHomePage() {
+  document.fonts.ready.then(() => {
+    initMenuScroll();
+    initSplitTextLogo();
+    initIntroductionTrigger();
+    initCabinSection();
+    initBreakfastSection();
+    initExploreSection();
+    initTestimonialSlider();
+    initTestimonialTrigger();
+  });
+}
+
 // Menu background on scroll
 
-const nav = document.querySelector(".top-menu");
+function initMenuScroll() {
+  const nav = document.querySelector(".top-menu");
+  if (!nav) return;
 
-const threshold = 700;
+  const threshold = 700;
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > threshold) {
-    nav.classList.add("top-menu-with-background");
-  } else {
-    nav.classList.remove("top-menu-with-background");
-  }
-});
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > threshold) {
+      nav.classList.add("top-menu-with-background");
+    } else {
+      nav.classList.remove("top-menu-with-background");
+    }
+  });
+}
 
 //Split text logo
 
-document.addEventListener("DOMContentLoaded", () => {
-  gsap.registerPlugin(SplitText);
-
+function initSplitTextLogo() {
   setTimeout(() => {
     let split = SplitText.create("#hero-title", { type: "chars" });
+    if (!split) return;
 
     gsap.from(split.chars, {
       duration: 1,
@@ -27,16 +42,15 @@ document.addEventListener("DOMContentLoaded", () => {
       stagger: 0.1,
     });
   }, 500);
-});
+}
 
 // Split scroll effect
 //https://www.youtube.com/watch?v=3ePl0OnmG3Y
 
-document.addEventListener("DOMContentLoaded", () => {
-  gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-
+function initIntroductionTrigger() {
   const verticalScroll = document.querySelector(".vertical-scroll");
   const textColumn = document.querySelector(".text-column");
+  if (!verticalScroll || !textColumn) return;
 
   const tl = gsap.timeline({
     defaults: {
@@ -64,16 +78,15 @@ document.addEventListener("DOMContentLoaded", () => {
     end: "",
     invalidateOnRefresh: true,
   });
-});
+}
 
-document.addEventListener("DOMContentLoaded", (event) => {
-  gsap.registerPlugin(ScrollTrigger, SplitText);
-
+function initCabinSection() {
   const cabinContainer = document.querySelector(".cabin-page");
   const split = SplitText.create("#cabin-title", {
     type: "chars",
     charsClass: "char",
   });
+  if (!cabinContainer || !split) return;
 
   gsap.set(cabinContainer, {
     opacity: 0,
@@ -109,13 +122,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
     },
     "+=0.3"
   );
-});
+}
 
-document.addEventListener("DOMContentLoaded", () => {
-  gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-
+function initBreakfastSection() {
   const verticalScroll = document.querySelector(".breakfast-section");
   const textColumn = document.querySelector(".breakfast-info");
+  if (!verticalScroll || !textColumn) return;
 
   const tl = gsap.timeline({
     defaults: {
@@ -143,13 +155,12 @@ document.addEventListener("DOMContentLoaded", () => {
     end: "",
     invalidateOnRefresh: true,
   });
-});
+}
 
-document.addEventListener("DOMContentLoaded", (event) => {
-  gsap.registerPlugin(ScrollTrigger, SplitText);
-
+function initExploreSection() {
   const exploreContainer = document.querySelector("#explore-container");
   const split = SplitText.create("#explore-title", { type: "chars" });
+  if (!exploreContainer || !split);
 
   gsap.set(exploreContainer, {
     opacity: 0,
@@ -185,31 +196,34 @@ document.addEventListener("DOMContentLoaded", (event) => {
     },
     "+=0.3"
   );
-});
+}
 
 //Testimonials
-const el = document.querySelector(".blaze-slider");
 
-new BlazeSlider(el, {
-  all: {
-    enableAutoplay: true,
-    autoplayInterval: 2000,
-    transitionDuration: 300,
-    slidesToShow: 2,
-    stopAutoplayOnInteraction: false,
-  },
-  "(max-width: 900px)": {
-    slidesToShow: 2,
-  },
-  "(max-width: 500px)": {
-    slidesToShow: 1,
-  },
-});
+function initTestimonialSlider() {
+  const el = document.querySelector(".blaze-slider");
+  if (!el) return;
 
-document.addEventListener("DOMContentLoaded", () => {
-  gsap.registerPlugin(ScrollTrigger);
+  new BlazeSlider(el, {
+    all: {
+      enableAutoplay: true,
+      autoplayInterval: 2000,
+      transitionDuration: 300,
+      slidesToShow: 2,
+      stopAutoplayOnInteraction: false,
+    },
+    "(max-width: 900px)": {
+      slidesToShow: 2,
+    },
+    "(max-width: 500px)": {
+      slidesToShow: 1,
+    },
+  });
+}
 
+function initTestimonialTrigger() {
   const testimonialsContainer = document.querySelector(".testimonials");
+  if (!testimonialsContainer) return;
 
   gsap.set(testimonialsContainer, {
     opacity: 0,
@@ -227,4 +241,4 @@ document.addEventListener("DOMContentLoaded", () => {
       once: true,
     },
   });
-});
+}

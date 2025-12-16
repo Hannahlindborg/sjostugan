@@ -17,13 +17,16 @@
     />
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link href="cabinindex.css" rel="stylesheet" type="text/css" />
-    <script src="global.js" defer></script>
-    <script src="cabinindex.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+    <script type="module" src="global.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/SplitText.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollSmoother.min.js"></script>
+    <script src="https://unpkg.com/@swup/head-plugin@2"></script>
     <title>Cabin Indexpage</title>
   </head>
-  <body>
+  <body data-page="cabinindex">
     <header>
       <nav class="top-menu">
         <ul>
@@ -35,452 +38,458 @@
         </ul>
       </nav>
     </header>
-    <div class="cabin-grid">
-      <h1>Cabins</h1>
-      <img
-        id="cabin-kurbits"
-        src="b&b-images/graphics/kurbits-blå-rotated.PNG"
-      />
-      <div class="cabin" id="lillstugan">
-        <h2>Lillstugan</h2>
-        <div class="cabin-image-container">
-          <img class="cabin-image" src="b&b-images/lillstugan.jpg" alt="" />
-        </div>
-        <div class="cabin-text">
-          <h3>Our coziest cabin — perfect for a peaceful getaway.</h3>
-          <p>
-            A charming little stay surrounded by nature, ideal for couples or
-            solo travelers who want simplicity, comfort, and quiet.
-          </p>
-          <div class="cabin-icons">
-            <div class="icon-container">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-              >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.5"
-                >
-                  <circle cx="8" cy="6" r="3.25" />
-                  <path d="m2.75 14.25c0-2.5 2-5 5.25-5s5.25 2.5 5.25 5" />
-                </g>
-              </svg>
-              <p>2 people</p>
-            </div>
-            <div class="icon-container">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="56"
-                height="56"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="currentColor"
-                  d="M7 14c1.66 0 3-1.34 3-3S8.66 8 7 8s-3 1.34-3 3s1.34 3 3 3m0-4c.55 0 1 .45 1 1s-.45 1-1 1s-1-.45-1-1s.45-1 1-1m12-3h-8v8H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4m2 8h-8V9h6c1.1 0 2 .9 2 2Z"
-                />
-              </svg>
-              <p>2 beds</p>
-            </div>
-            <div class="icon-container">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="56"
-                height="56"
-                viewBox="0 0 640 640"
-              >
-                <path
-                  fill="currentColor"
-                  d="M272 208c0-53-43-96-96-96s-96 43-96 96s43 96 96 96s96-43 96-96m44.4 32c-14.5 64.1-71.9 112-140.4 112c-79.5 0-144-64.5-144-144S96.5 64 176 64c68.5 0 125.9 47.9 140.4 112h71.8c8.8-9.8 21.6-16 35.8-16h104c26.5 0 48 21.5 48 48s-21.5 48-48 48H424c-14.2 0-27-6.2-35.8-16zM176 144c35.3 0 64 28.7 64 64s-28.7 64-64 64s-64-28.7-64-64s28.7-64 64-64m256 160c13.3 0 24 10.7 24 24v8h96c13.3 0 24 10.7 24 24s-10.7 24-24 24H312c-13.3 0-24-10.7-24-24s10.7-24 24-24h96v-8c0-13.3 10.7-24 24-24M320 528V416h224v112c0 26.5-21.5 48-48 48H368c-26.5 0-48-21.5-48-48M80 384h128c26.5 0 48 21.5 48 48s-21.5 48-48 48h-16c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32v-80c0-8.8 7.2-16 16-16m128 64c8.8 0 16-7.2 16-16s-7.2-16-16-16h-16v32zM56 528h176c13.3 0 24 10.7 24 24s-10.7 24-24 24H56c-13.3 0-24-10.7-24-24s10.7-24 24-24"
-                />
-              </svg>
-              <p>Kitchen</p>
-            </div>
-            <div class="icon-container">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="56"
-                height="56"
-                viewBox="0 0 32 32"
-              >
-                <path
-                  fill="currentColor"
-                  d="M21 1a2 2 0 0 0-2 2v9H3.5A2.5 2.5 0 0 0 1 14.5v2a1.5 1.5 0 0 0 1.414 1.498a11 11 0 0 0 3.396 5.327c.549.474 1.145.896 1.782 1.256L6.097 27.57c-.093.186-.227.453-.328.733c-.1.277-.21.678-.158 1.11c.06.5.332.959.832 1.25c.44.254.982.337 1.557.337h14c.825 0 1.567-.402 2.082-.918c.515-.515.918-1.257.918-2.082v-8c0-.268.155-.627.445-1.024A4 4 0 0 0 29 15V3a2 2 0 0 0-2-2zM9.416 25.403A11 11 0 0 0 13 26c4.22 0 8.114-2.081 10-5.582V28c0 .175-.098.433-.332.668S22.175 29 22 29H8q-.218-.001-.349-.02c.058-.159.142-.33.243-.533zM20.5 17c.334.445.814.775 1.368.92C20.811 21.587 17.223 24 13 24c-2.29 0-4.38-.855-5.968-2.263A9 9 0 0 1 4.222 17zm-.45-1H3v-1.5a.5.5 0 0 1 .5-.5H20v1.5q0 .257.05.5M27 15a2 2 0 0 1-2 2h-2.5a1.5 1.5 0 0 1-1.5-1.5V3h6z"
-                />
-              </svg>
-              <p>Bathroom</p>
-            </div>
+    <main id="swup" class="transition-main">
+      <div class="cabin-grid">
+        <h1>Cabins</h1>
+        <img
+          id="cabin-kurbits"
+          src="b&b-images/graphics/kurbits-blå-rotated.PNG"
+        />
+        <div class="cabin" id="lillstugan">
+          <h2>Lillstugan</h2>
+          <div class="cabin-image-container">
+            <img class="cabin-image" src="b&b-images/lillstugan.jpg" alt="" />
           </div>
-          <a class="nav-link" href="lillstugan.html"
-            >View full cabin details →
-          </a>
-        </div>
-      </div>
-      <div class="cabin" id="storstugan">
-        <h2>Storstugan</h2>
-        <div class="cabin-image-container">
-          <img class="cabin-image" src="b&b-images/yard.jpg" alt="" />
-        </div>
-        <div class="cabin-text">
-          <h3>Our largest cabin with room to relax.</h3>
-          <p>
-            Spacious, warm, and ideal for families or small groups who want
-            plenty of space and a comfortable home-like atmosphere.
-          </p>
-          <div class="cabin-icons">
-            <div class="icon-container">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-              >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.5"
+          <div class="cabin-text">
+            <h3>Our coziest cabin — perfect for a peaceful getaway.</h3>
+            <p>
+              A charming little stay surrounded by nature, ideal for couples or
+              solo travelers who want simplicity, comfort, and quiet.
+            </p>
+            <div class="cabin-icons">
+              <div class="icon-container">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
                 >
-                  <circle cx="8" cy="6" r="3.25" />
-                  <path d="m2.75 14.25c0-2.5 2-5 5.25-5s5.25 2.5 5.25 5" />
-                </g>
-              </svg>
-              <p>2 people</p>
-            </div>
-            <div class="icon-container">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="56"
-                height="56"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="currentColor"
-                  d="M7 14c1.66 0 3-1.34 3-3S8.66 8 7 8s-3 1.34-3 3s1.34 3 3 3m0-4c.55 0 1 .45 1 1s-.45 1-1 1s-1-.45-1-1s.45-1 1-1m12-3h-8v8H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4m2 8h-8V9h6c1.1 0 2 .9 2 2Z"
-                />
-              </svg>
-              <p>2 beds</p>
-            </div>
-            <div class="icon-container">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="56"
-                height="56"
-                viewBox="0 0 640 640"
-              >
-                <path
-                  fill="currentColor"
-                  d="M272 208c0-53-43-96-96-96s-96 43-96 96s43 96 96 96s96-43 96-96m44.4 32c-14.5 64.1-71.9 112-140.4 112c-79.5 0-144-64.5-144-144S96.5 64 176 64c68.5 0 125.9 47.9 140.4 112h71.8c8.8-9.8 21.6-16 35.8-16h104c26.5 0 48 21.5 48 48s-21.5 48-48 48H424c-14.2 0-27-6.2-35.8-16zM176 144c35.3 0 64 28.7 64 64s-28.7 64-64 64s-64-28.7-64-64s28.7-64 64-64m256 160c13.3 0 24 10.7 24 24v8h96c13.3 0 24 10.7 24 24s-10.7 24-24 24H312c-13.3 0-24-10.7-24-24s10.7-24 24-24h96v-8c0-13.3 10.7-24 24-24M320 528V416h224v112c0 26.5-21.5 48-48 48H368c-26.5 0-48-21.5-48-48M80 384h128c26.5 0 48 21.5 48 48s-21.5 48-48 48h-16c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32v-80c0-8.8 7.2-16 16-16m128 64c8.8 0 16-7.2 16-16s-7.2-16-16-16h-16v32zM56 528h176c13.3 0 24 10.7 24 24s-10.7 24-24 24H56c-13.3 0-24-10.7-24-24s10.7-24 24-24"
-                />
-              </svg>
-              <p>Kitchen</p>
-            </div>
-            <div class="icon-container">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="56"
-                height="56"
-                viewBox="0 0 32 32"
-              >
-                <path
-                  fill="currentColor"
-                  d="M21 1a2 2 0 0 0-2 2v9H3.5A2.5 2.5 0 0 0 1 14.5v2a1.5 1.5 0 0 0 1.414 1.498a11 11 0 0 0 3.396 5.327c.549.474 1.145.896 1.782 1.256L6.097 27.57c-.093.186-.227.453-.328.733c-.1.277-.21.678-.158 1.11c.06.5.332.959.832 1.25c.44.254.982.337 1.557.337h14c.825 0 1.567-.402 2.082-.918c.515-.515.918-1.257.918-2.082v-8c0-.268.155-.627.445-1.024A4 4 0 0 0 29 15V3a2 2 0 0 0-2-2zM9.416 25.403A11 11 0 0 0 13 26c4.22 0 8.114-2.081 10-5.582V28c0 .175-.098.433-.332.668S22.175 29 22 29H8q-.218-.001-.349-.02c.058-.159.142-.33.243-.533zM20.5 17c.334.445.814.775 1.368.92C20.811 21.587 17.223 24 13 24c-2.29 0-4.38-.855-5.968-2.263A9 9 0 0 1 4.222 17zm-.45-1H3v-1.5a.5.5 0 0 1 .5-.5H20v1.5q0 .257.05.5M27 15a2 2 0 0 1-2 2h-2.5a1.5 1.5 0 0 1-1.5-1.5V3h6z"
-                />
-              </svg>
-              <p>Bathroom</p>
-            </div>
-          </div>
-          <a class="nav-link" href="storstugan.html"
-            >View full cabin details →
-          </a>
-        </div>
-      </div>
-      <div class="cabin" id="name">
-        <h2>Björkstugan</h2>
-        <div class="cabin-image-container">
-          <img class="cabin-image" src="b&b-images/birchcabin.png" alt="" />
-        </div>
-        <div class="cabin-text">
-          <h3>A tranquil cabin surrounded by birch trees.</h3>
-          <p>
-            Cozy, peaceful, and perfect for couples or solo travelers seeking a
-            quiet nature retreat.
-          </p>
-          <div class="cabin-icons">
-            <div class="icon-container">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-              >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.5"
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                  >
+                    <circle cx="8" cy="6" r="3.25" />
+                    <path d="m2.75 14.25c0-2.5 2-5 5.25-5s5.25 2.5 5.25 5" />
+                  </g>
+                </svg>
+                <p>2 people</p>
+              </div>
+              <div class="icon-container">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="56"
+                  height="56"
+                  viewBox="0 0 24 24"
                 >
-                  <circle cx="8" cy="6" r="3.25" />
-                  <path d="m2.75 14.25c0-2.5 2-5 5.25-5s5.25 2.5 5.25 5" />
-                </g>
-              </svg>
-              <p>2 people</p>
+                  <path
+                    fill="currentColor"
+                    d="M7 14c1.66 0 3-1.34 3-3S8.66 8 7 8s-3 1.34-3 3s1.34 3 3 3m0-4c.55 0 1 .45 1 1s-.45 1-1 1s-1-.45-1-1s.45-1 1-1m12-3h-8v8H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4m2 8h-8V9h6c1.1 0 2 .9 2 2Z"
+                  />
+                </svg>
+                <p>2 beds</p>
+              </div>
+              <div class="icon-container">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="56"
+                  height="56"
+                  viewBox="0 0 640 640"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M272 208c0-53-43-96-96-96s-96 43-96 96s43 96 96 96s96-43 96-96m44.4 32c-14.5 64.1-71.9 112-140.4 112c-79.5 0-144-64.5-144-144S96.5 64 176 64c68.5 0 125.9 47.9 140.4 112h71.8c8.8-9.8 21.6-16 35.8-16h104c26.5 0 48 21.5 48 48s-21.5 48-48 48H424c-14.2 0-27-6.2-35.8-16zM176 144c35.3 0 64 28.7 64 64s-28.7 64-64 64s-64-28.7-64-64s28.7-64 64-64m256 160c13.3 0 24 10.7 24 24v8h96c13.3 0 24 10.7 24 24s-10.7 24-24 24H312c-13.3 0-24-10.7-24-24s10.7-24 24-24h96v-8c0-13.3 10.7-24 24-24M320 528V416h224v112c0 26.5-21.5 48-48 48H368c-26.5 0-48-21.5-48-48M80 384h128c26.5 0 48 21.5 48 48s-21.5 48-48 48h-16c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32v-80c0-8.8 7.2-16 16-16m128 64c8.8 0 16-7.2 16-16s-7.2-16-16-16h-16v32zM56 528h176c13.3 0 24 10.7 24 24s-10.7 24-24 24H56c-13.3 0-24-10.7-24-24s10.7-24 24-24"
+                  />
+                </svg>
+                <p>Kitchen</p>
+              </div>
+              <div class="icon-container">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="56"
+                  height="56"
+                  viewBox="0 0 32 32"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M21 1a2 2 0 0 0-2 2v9H3.5A2.5 2.5 0 0 0 1 14.5v2a1.5 1.5 0 0 0 1.414 1.498a11 11 0 0 0 3.396 5.327c.549.474 1.145.896 1.782 1.256L6.097 27.57c-.093.186-.227.453-.328.733c-.1.277-.21.678-.158 1.11c.06.5.332.959.832 1.25c.44.254.982.337 1.557.337h14c.825 0 1.567-.402 2.082-.918c.515-.515.918-1.257.918-2.082v-8c0-.268.155-.627.445-1.024A4 4 0 0 0 29 15V3a2 2 0 0 0-2-2zM9.416 25.403A11 11 0 0 0 13 26c4.22 0 8.114-2.081 10-5.582V28c0 .175-.098.433-.332.668S22.175 29 22 29H8q-.218-.001-.349-.02c.058-.159.142-.33.243-.533zM20.5 17c.334.445.814.775 1.368.92C20.811 21.587 17.223 24 13 24c-2.29 0-4.38-.855-5.968-2.263A9 9 0 0 1 4.222 17zm-.45-1H3v-1.5a.5.5 0 0 1 .5-.5H20v1.5q0 .257.05.5M27 15a2 2 0 0 1-2 2h-2.5a1.5 1.5 0 0 1-1.5-1.5V3h6z"
+                  />
+                </svg>
+                <p>Bathroom</p>
+              </div>
             </div>
-            <div class="icon-container">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="56"
-                height="56"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="currentColor"
-                  d="M7 14c1.66 0 3-1.34 3-3S8.66 8 7 8s-3 1.34-3 3s1.34 3 3 3m0-4c.55 0 1 .45 1 1s-.45 1-1 1s-1-.45-1-1s.45-1 1-1m12-3h-8v8H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4m2 8h-8V9h6c1.1 0 2 .9 2 2Z"
-                />
-              </svg>
-              <p>2 beds</p>
-            </div>
-            <div class="icon-container">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="56"
-                height="56"
-                viewBox="0 0 640 640"
-              >
-                <path
-                  fill="currentColor"
-                  d="M272 208c0-53-43-96-96-96s-96 43-96 96s43 96 96 96s96-43 96-96m44.4 32c-14.5 64.1-71.9 112-140.4 112c-79.5 0-144-64.5-144-144S96.5 64 176 64c68.5 0 125.9 47.9 140.4 112h71.8c8.8-9.8 21.6-16 35.8-16h104c26.5 0 48 21.5 48 48s-21.5 48-48 48H424c-14.2 0-27-6.2-35.8-16zM176 144c35.3 0 64 28.7 64 64s-28.7 64-64 64s-64-28.7-64-64s28.7-64 64-64m256 160c13.3 0 24 10.7 24 24v8h96c13.3 0 24 10.7 24 24s-10.7 24-24 24H312c-13.3 0-24-10.7-24-24s10.7-24 24-24h96v-8c0-13.3 10.7-24 24-24M320 528V416h224v112c0 26.5-21.5 48-48 48H368c-26.5 0-48-21.5-48-48M80 384h128c26.5 0 48 21.5 48 48s-21.5 48-48 48h-16c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32v-80c0-8.8 7.2-16 16-16m128 64c8.8 0 16-7.2 16-16s-7.2-16-16-16h-16v32zM56 528h176c13.3 0 24 10.7 24 24s-10.7 24-24 24H56c-13.3 0-24-10.7-24-24s10.7-24 24-24"
-                />
-              </svg>
-              <p>Kitchen</p>
-            </div>
-            <div class="icon-container">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="56"
-                height="56"
-                viewBox="0 0 32 32"
-              >
-                <path
-                  fill="currentColor"
-                  d="M21 1a2 2 0 0 0-2 2v9H3.5A2.5 2.5 0 0 0 1 14.5v2a1.5 1.5 0 0 0 1.414 1.498a11 11 0 0 0 3.396 5.327c.549.474 1.145.896 1.782 1.256L6.097 27.57c-.093.186-.227.453-.328.733c-.1.277-.21.678-.158 1.11c.06.5.332.959.832 1.25c.44.254.982.337 1.557.337h14c.825 0 1.567-.402 2.082-.918c.515-.515.918-1.257.918-2.082v-8c0-.268.155-.627.445-1.024A4 4 0 0 0 29 15V3a2 2 0 0 0-2-2zM9.416 25.403A11 11 0 0 0 13 26c4.22 0 8.114-2.081 10-5.582V28c0 .175-.098.433-.332.668S22.175 29 22 29H8q-.218-.001-.349-.02c.058-.159.142-.33.243-.533zM20.5 17c.334.445.814.775 1.368.92C20.811 21.587 17.223 24 13 24c-2.29 0-4.38-.855-5.968-2.263A9 9 0 0 1 4.222 17zm-.45-1H3v-1.5a.5.5 0 0 1 .5-.5H20v1.5q0 .257.05.5M27 15a2 2 0 0 1-2 2h-2.5a1.5 1.5 0 0 1-1.5-1.5V3h6z"
-                />
-              </svg>
-              <p>Bathroom</p>
-            </div>
+            <a class="nav-link" href="lillstugan.html"
+              >View full cabin details →
+            </a>
           </div>
+        </div>
+        <div class="cabin" id="storstugan">
+          <h2>Storstugan</h2>
+          <div class="cabin-image-container">
+            <img class="cabin-image" src="b&b-images/yard.jpg" alt="" />
+          </div>
+          <div class="cabin-text">
+            <h3>Our largest cabin with room to relax.</h3>
+            <p>
+              Spacious, warm, and ideal for families or small groups who want
+              plenty of space and a comfortable home-like atmosphere.
+            </p>
+            <div class="cabin-icons">
+              <div class="icon-container">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                  >
+                    <circle cx="8" cy="6" r="3.25" />
+                    <path d="m2.75 14.25c0-2.5 2-5 5.25-5s5.25 2.5 5.25 5" />
+                  </g>
+                </svg>
+                <p>2 people</p>
+              </div>
+              <div class="icon-container">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="56"
+                  height="56"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M7 14c1.66 0 3-1.34 3-3S8.66 8 7 8s-3 1.34-3 3s1.34 3 3 3m0-4c.55 0 1 .45 1 1s-.45 1-1 1s-1-.45-1-1s.45-1 1-1m12-3h-8v8H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4m2 8h-8V9h6c1.1 0 2 .9 2 2Z"
+                  />
+                </svg>
+                <p>2 beds</p>
+              </div>
+              <div class="icon-container">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="56"
+                  height="56"
+                  viewBox="0 0 640 640"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M272 208c0-53-43-96-96-96s-96 43-96 96s43 96 96 96s96-43 96-96m44.4 32c-14.5 64.1-71.9 112-140.4 112c-79.5 0-144-64.5-144-144S96.5 64 176 64c68.5 0 125.9 47.9 140.4 112h71.8c8.8-9.8 21.6-16 35.8-16h104c26.5 0 48 21.5 48 48s-21.5 48-48 48H424c-14.2 0-27-6.2-35.8-16zM176 144c35.3 0 64 28.7 64 64s-28.7 64-64 64s-64-28.7-64-64s28.7-64 64-64m256 160c13.3 0 24 10.7 24 24v8h96c13.3 0 24 10.7 24 24s-10.7 24-24 24H312c-13.3 0-24-10.7-24-24s10.7-24 24-24h96v-8c0-13.3 10.7-24 24-24M320 528V416h224v112c0 26.5-21.5 48-48 48H368c-26.5 0-48-21.5-48-48M80 384h128c26.5 0 48 21.5 48 48s-21.5 48-48 48h-16c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32v-80c0-8.8 7.2-16 16-16m128 64c8.8 0 16-7.2 16-16s-7.2-16-16-16h-16v32zM56 528h176c13.3 0 24 10.7 24 24s-10.7 24-24 24H56c-13.3 0-24-10.7-24-24s10.7-24 24-24"
+                  />
+                </svg>
+                <p>Kitchen</p>
+              </div>
+              <div class="icon-container">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="56"
+                  height="56"
+                  viewBox="0 0 32 32"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M21 1a2 2 0 0 0-2 2v9H3.5A2.5 2.5 0 0 0 1 14.5v2a1.5 1.5 0 0 0 1.414 1.498a11 11 0 0 0 3.396 5.327c.549.474 1.145.896 1.782 1.256L6.097 27.57c-.093.186-.227.453-.328.733c-.1.277-.21.678-.158 1.11c.06.5.332.959.832 1.25c.44.254.982.337 1.557.337h14c.825 0 1.567-.402 2.082-.918c.515-.515.918-1.257.918-2.082v-8c0-.268.155-.627.445-1.024A4 4 0 0 0 29 15V3a2 2 0 0 0-2-2zM9.416 25.403A11 11 0 0 0 13 26c4.22 0 8.114-2.081 10-5.582V28c0 .175-.098.433-.332.668S22.175 29 22 29H8q-.218-.001-.349-.02c.058-.159.142-.33.243-.533zM20.5 17c.334.445.814.775 1.368.92C20.811 21.587 17.223 24 13 24c-2.29 0-4.38-.855-5.968-2.263A9 9 0 0 1 4.222 17zm-.45-1H3v-1.5a.5.5 0 0 1 .5-.5H20v1.5q0 .257.05.5M27 15a2 2 0 0 1-2 2h-2.5a1.5 1.5 0 0 1-1.5-1.5V3h6z"
+                  />
+                </svg>
+                <p>Bathroom</p>
+              </div>
+            </div>
+            <a class="nav-link" href="storstugan.html"
+              >View full cabin details →
+            </a>
+          </div>
+        </div>
+        <div class="cabin" id="name">
+          <h2>Björkstugan</h2>
+          <div class="cabin-image-container">
+            <img class="cabin-image" src="b&b-images/birchcabin.png" alt="" />
+          </div>
+          <div class="cabin-text">
+            <h3>A tranquil cabin surrounded by birch trees.</h3>
+            <p>
+              Cozy, peaceful, and perfect for couples or solo travelers seeking
+              a quiet nature retreat.
+            </p>
+            <div class="cabin-icons">
+              <div class="icon-container">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                  >
+                    <circle cx="8" cy="6" r="3.25" />
+                    <path d="m2.75 14.25c0-2.5 2-5 5.25-5s5.25 2.5 5.25 5" />
+                  </g>
+                </svg>
+                <p>2 people</p>
+              </div>
+              <div class="icon-container">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="56"
+                  height="56"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M7 14c1.66 0 3-1.34 3-3S8.66 8 7 8s-3 1.34-3 3s1.34 3 3 3m0-4c.55 0 1 .45 1 1s-.45 1-1 1s-1-.45-1-1s.45-1 1-1m12-3h-8v8H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4m2 8h-8V9h6c1.1 0 2 .9 2 2Z"
+                  />
+                </svg>
+                <p>2 beds</p>
+              </div>
+              <div class="icon-container">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="56"
+                  height="56"
+                  viewBox="0 0 640 640"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M272 208c0-53-43-96-96-96s-96 43-96 96s43 96 96 96s96-43 96-96m44.4 32c-14.5 64.1-71.9 112-140.4 112c-79.5 0-144-64.5-144-144S96.5 64 176 64c68.5 0 125.9 47.9 140.4 112h71.8c8.8-9.8 21.6-16 35.8-16h104c26.5 0 48 21.5 48 48s-21.5 48-48 48H424c-14.2 0-27-6.2-35.8-16zM176 144c35.3 0 64 28.7 64 64s-28.7 64-64 64s-64-28.7-64-64s28.7-64 64-64m256 160c13.3 0 24 10.7 24 24v8h96c13.3 0 24 10.7 24 24s-10.7 24-24 24H312c-13.3 0-24-10.7-24-24s10.7-24 24-24h96v-8c0-13.3 10.7-24 24-24M320 528V416h224v112c0 26.5-21.5 48-48 48H368c-26.5 0-48-21.5-48-48M80 384h128c26.5 0 48 21.5 48 48s-21.5 48-48 48h-16c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32v-80c0-8.8 7.2-16 16-16m128 64c8.8 0 16-7.2 16-16s-7.2-16-16-16h-16v32zM56 528h176c13.3 0 24 10.7 24 24s-10.7 24-24 24H56c-13.3 0-24-10.7-24-24s10.7-24 24-24"
+                  />
+                </svg>
+                <p>Kitchen</p>
+              </div>
+              <div class="icon-container">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="56"
+                  height="56"
+                  viewBox="0 0 32 32"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M21 1a2 2 0 0 0-2 2v9H3.5A2.5 2.5 0 0 0 1 14.5v2a1.5 1.5 0 0 0 1.414 1.498a11 11 0 0 0 3.396 5.327c.549.474 1.145.896 1.782 1.256L6.097 27.57c-.093.186-.227.453-.328.733c-.1.277-.21.678-.158 1.11c.06.5.332.959.832 1.25c.44.254.982.337 1.557.337h14c.825 0 1.567-.402 2.082-.918c.515-.515.918-1.257.918-2.082v-8c0-.268.155-.627.445-1.024A4 4 0 0 0 29 15V3a2 2 0 0 0-2-2zM9.416 25.403A11 11 0 0 0 13 26c4.22 0 8.114-2.081 10-5.582V28c0 .175-.098.433-.332.668S22.175 29 22 29H8q-.218-.001-.349-.02c.058-.159.142-.33.243-.533zM20.5 17c.334.445.814.775 1.368.92C20.811 21.587 17.223 24 13 24c-2.29 0-4.38-.855-5.968-2.263A9 9 0 0 1 4.222 17zm-.45-1H3v-1.5a.5.5 0 0 1 .5-.5H20v1.5q0 .257.05.5M27 15a2 2 0 0 1-2 2h-2.5a1.5 1.5 0 0 1-1.5-1.5V3h6z"
+                  />
+                </svg>
+                <p>Bathroom</p>
+              </div>
+            </div>
 
-          <a class="nav-link" href="björkstugan.html"
-            >View full cabin details →
-          </a>
-        </div>
-      </div>
-      <div class="cabin" id="torpet">
-        <h2>Torpet</h2>
-        <div class="cabin-image-container">
-          <img class="cabin-image" src="b&b-images/torpet.jpg" alt="" />
-        </div>
-        <div class="cabin-text">
-          <h3>A rustic cabin full of charm and character.</h3>
-          <p>
-            With its traditional red-painted wood and peaceful surroundings,
-            Torpet is a lovely choice for guests seeking a classic Swedish
-            countryside feel.
-          </p>
-          <div class="cabin-icons">
-            <div class="icon-container">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-              >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.5"
-                >
-                  <circle cx="8" cy="6" r="3.25" />
-                  <path d="m2.75 14.25c0-2.5 2-5 5.25-5s5.25 2.5 5.25 5" />
-                </g>
-              </svg>
-              <p>2 people</p>
-            </div>
-            <div class="icon-container">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="56"
-                height="56"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="currentColor"
-                  d="M7 14c1.66 0 3-1.34 3-3S8.66 8 7 8s-3 1.34-3 3s1.34 3 3 3m0-4c.55 0 1 .45 1 1s-.45 1-1 1s-1-.45-1-1s.45-1 1-1m12-3h-8v8H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4m2 8h-8V9h6c1.1 0 2 .9 2 2Z"
-                />
-              </svg>
-              <p>2 beds</p>
-            </div>
-            <div class="icon-container">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="56"
-                height="56"
-                viewBox="0 0 640 640"
-              >
-                <path
-                  fill="currentColor"
-                  d="M272 208c0-53-43-96-96-96s-96 43-96 96s43 96 96 96s96-43 96-96m44.4 32c-14.5 64.1-71.9 112-140.4 112c-79.5 0-144-64.5-144-144S96.5 64 176 64c68.5 0 125.9 47.9 140.4 112h71.8c8.8-9.8 21.6-16 35.8-16h104c26.5 0 48 21.5 48 48s-21.5 48-48 48H424c-14.2 0-27-6.2-35.8-16zM176 144c35.3 0 64 28.7 64 64s-28.7 64-64 64s-64-28.7-64-64s28.7-64 64-64m256 160c13.3 0 24 10.7 24 24v8h96c13.3 0 24 10.7 24 24s-10.7 24-24 24H312c-13.3 0-24-10.7-24-24s10.7-24 24-24h96v-8c0-13.3 10.7-24 24-24M320 528V416h224v112c0 26.5-21.5 48-48 48H368c-26.5 0-48-21.5-48-48M80 384h128c26.5 0 48 21.5 48 48s-21.5 48-48 48h-16c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32v-80c0-8.8 7.2-16 16-16m128 64c8.8 0 16-7.2 16-16s-7.2-16-16-16h-16v32zM56 528h176c13.3 0 24 10.7 24 24s-10.7 24-24 24H56c-13.3 0-24-10.7-24-24s10.7-24 24-24"
-                />
-              </svg>
-              <p>Kitchen</p>
-            </div>
-            <div class="icon-container">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="56"
-                height="56"
-                viewBox="0 0 32 32"
-              >
-                <path
-                  fill="currentColor"
-                  d="M21 1a2 2 0 0 0-2 2v9H3.5A2.5 2.5 0 0 0 1 14.5v2a1.5 1.5 0 0 0 1.414 1.498a11 11 0 0 0 3.396 5.327c.549.474 1.145.896 1.782 1.256L6.097 27.57c-.093.186-.227.453-.328.733c-.1.277-.21.678-.158 1.11c.06.5.332.959.832 1.25c.44.254.982.337 1.557.337h14c.825 0 1.567-.402 2.082-.918c.515-.515.918-1.257.918-2.082v-8c0-.268.155-.627.445-1.024A4 4 0 0 0 29 15V3a2 2 0 0 0-2-2zM9.416 25.403A11 11 0 0 0 13 26c4.22 0 8.114-2.081 10-5.582V28c0 .175-.098.433-.332.668S22.175 29 22 29H8q-.218-.001-.349-.02c.058-.159.142-.33.243-.533zM20.5 17c.334.445.814.775 1.368.92C20.811 21.587 17.223 24 13 24c-2.29 0-4.38-.855-5.968-2.263A9 9 0 0 1 4.222 17zm-.45-1H3v-1.5a.5.5 0 0 1 .5-.5H20v1.5q0 .257.05.5M27 15a2 2 0 0 1-2 2h-2.5a1.5 1.5 0 0 1-1.5-1.5V3h6z"
-                />
-              </svg>
-              <p>Bathroom</p>
-            </div>
+            <a class="nav-link" href="björkstugan.html"
+              >View full cabin details →
+            </a>
           </div>
-          <a class="nav-link" href="torpet.html">View full cabin details → </a>
         </div>
-      </div>
-      <div class="cabin" id="ladan">
-        <h2>Ladan</h2>
-        <div class="cabin-image-container">
-          <img class="cabin-image" src="b&b-images/ladan.jpg" alt="" />
-        </div>
-        <div class="cabin-text">
-          <h3>A cozy barn-inspired cabin with a warm, rustic touch.</h3>
-          <p>
-            Ideal for both couples and families, Ladan offers a relaxed
-            atmosphere with beautiful views right outside your door.
-          </p>
-          <div class="cabin-icons">
-            <div class="icon-container">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-              >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.5"
-                >
-                  <circle cx="8" cy="6" r="3.25" />
-                  <path d="m2.75 14.25c0-2.5 2-5 5.25-5s5.25 2.5 5.25 5" />
-                </g>
-              </svg>
-              <p>2 people</p>
-            </div>
-            <div class="icon-container">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="56"
-                height="56"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="currentColor"
-                  d="M7 14c1.66 0 3-1.34 3-3S8.66 8 7 8s-3 1.34-3 3s1.34 3 3 3m0-4c.55 0 1 .45 1 1s-.45 1-1 1s-1-.45-1-1s.45-1 1-1m12-3h-8v8H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4m2 8h-8V9h6c1.1 0 2 .9 2 2Z"
-                />
-              </svg>
-              <p>2 beds</p>
-            </div>
-            <div class="icon-container">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="56"
-                height="56"
-                viewBox="0 0 640 640"
-              >
-                <path
-                  fill="currentColor"
-                  d="M272 208c0-53-43-96-96-96s-96 43-96 96s43 96 96 96s96-43 96-96m44.4 32c-14.5 64.1-71.9 112-140.4 112c-79.5 0-144-64.5-144-144S96.5 64 176 64c68.5 0 125.9 47.9 140.4 112h71.8c8.8-9.8 21.6-16 35.8-16h104c26.5 0 48 21.5 48 48s-21.5 48-48 48H424c-14.2 0-27-6.2-35.8-16zM176 144c35.3 0 64 28.7 64 64s-28.7 64-64 64s-64-28.7-64-64s28.7-64 64-64m256 160c13.3 0 24 10.7 24 24v8h96c13.3 0 24 10.7 24 24s-10.7 24-24 24H312c-13.3 0-24-10.7-24-24s10.7-24 24-24h96v-8c0-13.3 10.7-24 24-24M320 528V416h224v112c0 26.5-21.5 48-48 48H368c-26.5 0-48-21.5-48-48M80 384h128c26.5 0 48 21.5 48 48s-21.5 48-48 48h-16c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32v-80c0-8.8 7.2-16 16-16m128 64c8.8 0 16-7.2 16-16s-7.2-16-16-16h-16v32zM56 528h176c13.3 0 24 10.7 24 24s-10.7 24-24 24H56c-13.3 0-24-10.7-24-24s10.7-24 24-24"
-                />
-              </svg>
-              <p>Kitchen</p>
-            </div>
-            <div class="icon-container">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="56"
-                height="56"
-                viewBox="0 0 32 32"
-              >
-                <path
-                  fill="currentColor"
-                  d="M21 1a2 2 0 0 0-2 2v9H3.5A2.5 2.5 0 0 0 1 14.5v2a1.5 1.5 0 0 0 1.414 1.498a11 11 0 0 0 3.396 5.327c.549.474 1.145.896 1.782 1.256L6.097 27.57c-.093.186-.227.453-.328.733c-.1.277-.21.678-.158 1.11c.06.5.332.959.832 1.25c.44.254.982.337 1.557.337h14c.825 0 1.567-.402 2.082-.918c.515-.515.918-1.257.918-2.082v-8c0-.268.155-.627.445-1.024A4 4 0 0 0 29 15V3a2 2 0 0 0-2-2zM9.416 25.403A11 11 0 0 0 13 26c4.22 0 8.114-2.081 10-5.582V28c0 .175-.098.433-.332.668S22.175 29 22 29H8q-.218-.001-.349-.02c.058-.159.142-.33.243-.533zM20.5 17c.334.445.814.775 1.368.92C20.811 21.587 17.223 24 13 24c-2.29 0-4.38-.855-5.968-2.263A9 9 0 0 1 4.222 17zm-.45-1H3v-1.5a.5.5 0 0 1 .5-.5H20v1.5q0 .257.05.5M27 15a2 2 0 0 1-2 2h-2.5a1.5 1.5 0 0 1-1.5-1.5V3h6z"
-                />
-              </svg>
-              <p>Bathroom</p>
-            </div>
+        <div class="cabin" id="torpet">
+          <h2>Torpet</h2>
+          <div class="cabin-image-container">
+            <img class="cabin-image" src="b&b-images/torpet.jpg" alt="" />
           </div>
+          <div class="cabin-text">
+            <h3>A rustic cabin full of charm and character.</h3>
+            <p>
+              With its traditional red-painted wood and peaceful surroundings,
+              Torpet is a lovely choice for guests seeking a classic Swedish
+              countryside feel.
+            </p>
+            <div class="cabin-icons">
+              <div class="icon-container">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                  >
+                    <circle cx="8" cy="6" r="3.25" />
+                    <path d="m2.75 14.25c0-2.5 2-5 5.25-5s5.25 2.5 5.25 5" />
+                  </g>
+                </svg>
+                <p>2 people</p>
+              </div>
+              <div class="icon-container">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="56"
+                  height="56"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M7 14c1.66 0 3-1.34 3-3S8.66 8 7 8s-3 1.34-3 3s1.34 3 3 3m0-4c.55 0 1 .45 1 1s-.45 1-1 1s-1-.45-1-1s.45-1 1-1m12-3h-8v8H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4m2 8h-8V9h6c1.1 0 2 .9 2 2Z"
+                  />
+                </svg>
+                <p>2 beds</p>
+              </div>
+              <div class="icon-container">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="56"
+                  height="56"
+                  viewBox="0 0 640 640"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M272 208c0-53-43-96-96-96s-96 43-96 96s43 96 96 96s96-43 96-96m44.4 32c-14.5 64.1-71.9 112-140.4 112c-79.5 0-144-64.5-144-144S96.5 64 176 64c68.5 0 125.9 47.9 140.4 112h71.8c8.8-9.8 21.6-16 35.8-16h104c26.5 0 48 21.5 48 48s-21.5 48-48 48H424c-14.2 0-27-6.2-35.8-16zM176 144c35.3 0 64 28.7 64 64s-28.7 64-64 64s-64-28.7-64-64s28.7-64 64-64m256 160c13.3 0 24 10.7 24 24v8h96c13.3 0 24 10.7 24 24s-10.7 24-24 24H312c-13.3 0-24-10.7-24-24s10.7-24 24-24h96v-8c0-13.3 10.7-24 24-24M320 528V416h224v112c0 26.5-21.5 48-48 48H368c-26.5 0-48-21.5-48-48M80 384h128c26.5 0 48 21.5 48 48s-21.5 48-48 48h-16c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32v-80c0-8.8 7.2-16 16-16m128 64c8.8 0 16-7.2 16-16s-7.2-16-16-16h-16v32zM56 528h176c13.3 0 24 10.7 24 24s-10.7 24-24 24H56c-13.3 0-24-10.7-24-24s10.7-24 24-24"
+                  />
+                </svg>
+                <p>Kitchen</p>
+              </div>
+              <div class="icon-container">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="56"
+                  height="56"
+                  viewBox="0 0 32 32"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M21 1a2 2 0 0 0-2 2v9H3.5A2.5 2.5 0 0 0 1 14.5v2a1.5 1.5 0 0 0 1.414 1.498a11 11 0 0 0 3.396 5.327c.549.474 1.145.896 1.782 1.256L6.097 27.57c-.093.186-.227.453-.328.733c-.1.277-.21.678-.158 1.11c.06.5.332.959.832 1.25c.44.254.982.337 1.557.337h14c.825 0 1.567-.402 2.082-.918c.515-.515.918-1.257.918-2.082v-8c0-.268.155-.627.445-1.024A4 4 0 0 0 29 15V3a2 2 0 0 0-2-2zM9.416 25.403A11 11 0 0 0 13 26c4.22 0 8.114-2.081 10-5.582V28c0 .175-.098.433-.332.668S22.175 29 22 29H8q-.218-.001-.349-.02c.058-.159.142-.33.243-.533zM20.5 17c.334.445.814.775 1.368.92C20.811 21.587 17.223 24 13 24c-2.29 0-4.38-.855-5.968-2.263A9 9 0 0 1 4.222 17zm-.45-1H3v-1.5a.5.5 0 0 1 .5-.5H20v1.5q0 .257.05.5M27 15a2 2 0 0 1-2 2h-2.5a1.5 1.5 0 0 1-1.5-1.5V3h6z"
+                  />
+                </svg>
+                <p>Bathroom</p>
+              </div>
+            </div>
+            <a class="nav-link" href="torpet.html"
+              >View full cabin details →
+            </a>
+          </div>
+        </div>
+        <div class="cabin" id="ladan">
+          <h2>Ladan</h2>
+          <div class="cabin-image-container">
+            <img class="cabin-image" src="b&b-images/ladan.jpg" alt="" />
+          </div>
+          <div class="cabin-text">
+            <h3>A cozy barn-inspired cabin with a warm, rustic touch.</h3>
+            <p>
+              Ideal for both couples and families, Ladan offers a relaxed
+              atmosphere with beautiful views right outside your door.
+            </p>
+            <div class="cabin-icons">
+              <div class="icon-container">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                  >
+                    <circle cx="8" cy="6" r="3.25" />
+                    <path d="m2.75 14.25c0-2.5 2-5 5.25-5s5.25 2.5 5.25 5" />
+                  </g>
+                </svg>
+                <p>2 people</p>
+              </div>
+              <div class="icon-container">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="56"
+                  height="56"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M7 14c1.66 0 3-1.34 3-3S8.66 8 7 8s-3 1.34-3 3s1.34 3 3 3m0-4c.55 0 1 .45 1 1s-.45 1-1 1s-1-.45-1-1s.45-1 1-1m12-3h-8v8H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4m2 8h-8V9h6c1.1 0 2 .9 2 2Z"
+                  />
+                </svg>
+                <p>2 beds</p>
+              </div>
+              <div class="icon-container">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="56"
+                  height="56"
+                  viewBox="0 0 640 640"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M272 208c0-53-43-96-96-96s-96 43-96 96s43 96 96 96s96-43 96-96m44.4 32c-14.5 64.1-71.9 112-140.4 112c-79.5 0-144-64.5-144-144S96.5 64 176 64c68.5 0 125.9 47.9 140.4 112h71.8c8.8-9.8 21.6-16 35.8-16h104c26.5 0 48 21.5 48 48s-21.5 48-48 48H424c-14.2 0-27-6.2-35.8-16zM176 144c35.3 0 64 28.7 64 64s-28.7 64-64 64s-64-28.7-64-64s28.7-64 64-64m256 160c13.3 0 24 10.7 24 24v8h96c13.3 0 24 10.7 24 24s-10.7 24-24 24H312c-13.3 0-24-10.7-24-24s10.7-24 24-24h96v-8c0-13.3 10.7-24 24-24M320 528V416h224v112c0 26.5-21.5 48-48 48H368c-26.5 0-48-21.5-48-48M80 384h128c26.5 0 48 21.5 48 48s-21.5 48-48 48h-16c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32v-80c0-8.8 7.2-16 16-16m128 64c8.8 0 16-7.2 16-16s-7.2-16-16-16h-16v32zM56 528h176c13.3 0 24 10.7 24 24s-10.7 24-24 24H56c-13.3 0-24-10.7-24-24s10.7-24 24-24"
+                  />
+                </svg>
+                <p>Kitchen</p>
+              </div>
+              <div class="icon-container">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="56"
+                  height="56"
+                  viewBox="0 0 32 32"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M21 1a2 2 0 0 0-2 2v9H3.5A2.5 2.5 0 0 0 1 14.5v2a1.5 1.5 0 0 0 1.414 1.498a11 11 0 0 0 3.396 5.327c.549.474 1.145.896 1.782 1.256L6.097 27.57c-.093.186-.227.453-.328.733c-.1.277-.21.678-.158 1.11c.06.5.332.959.832 1.25c.44.254.982.337 1.557.337h14c.825 0 1.567-.402 2.082-.918c.515-.515.918-1.257.918-2.082v-8c0-.268.155-.627.445-1.024A4 4 0 0 0 29 15V3a2 2 0 0 0-2-2zM9.416 25.403A11 11 0 0 0 13 26c4.22 0 8.114-2.081 10-5.582V28c0 .175-.098.433-.332.668S22.175 29 22 29H8q-.218-.001-.349-.02c.058-.159.142-.33.243-.533zM20.5 17c.334.445.814.775 1.368.92C20.811 21.587 17.223 24 13 24c-2.29 0-4.38-.855-5.968-2.263A9 9 0 0 1 4.222 17zm-.45-1H3v-1.5a.5.5 0 0 1 .5-.5H20v1.5q0 .257.05.5M27 15a2 2 0 0 1-2 2h-2.5a1.5 1.5 0 0 1-1.5-1.5V3h6z"
+                  />
+                </svg>
+                <p>Bathroom</p>
+              </div>
+            </div>
 
-          <a class="nav-link" href="ladan.html">View full cabin details → </a>
+            <a class="nav-link" href="ladan.html">View full cabin details → </a>
+          </div>
         </div>
       </div>
-    </div>
+    </main>
     <footer id="footer-container">
       <div id="footer-overlay"></div>
       <div class="footer-content">
         <img id="footer-logo" src="b&b-images/graphics/SVG/Asset 1.svg" />
-        <div class="contact-row">
-          <h4>Contact us</h4>
-          <ul>
-            <li>sjöstugan@gmail.com</li>
-            <li>Address, adress</li>
-            <li>+46 xxxxxxx</li>
-          </ul>
-        </div>
-        <div class="socials-row">
-          <h4>Socials</h4>
-          <div class="social-icons">
-            <div class="social-icon-container">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="currentColor"
-                  d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"
-                />
-              </svg>
-            </div>
-            <div class="social-icon-container">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="currentColor"
-                  d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95"
-                />
-              </svg>
+        <div class="footer-information">
+          <div class="contact-row">
+            <h4>Contact us</h4>
+            <ul>
+              <li>sjöstugan@gmail.com</li>
+              <li>Address, adress</li>
+              <li>+46 xxxxxxx</li>
+            </ul>
+          </div>
+          <div class="socials-row">
+            <h4>Socials</h4>
+            <div class="social-icons">
+              <div class="social-icon-container">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"
+                  />
+                </svg>
+              </div>
+              <div class="social-icon-container">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
         </div>

@@ -1,9 +1,16 @@
 //ScrollTrigger cabin cards
 
-document.addEventListener("DOMContentLoaded", (event) => {
+export function initCabinIndexPage() {
+  document.fonts.ready.then(() => {
+    initCabinCardTrigger();
+  });
+}
+
+function initCabinCardTrigger() {
   gsap.registerPlugin(ScrollTrigger);
 
   const cabinCards = document.querySelectorAll(".cabin");
+  if (!cabinCards) return;
 
   gsap.set(cabinCards, {
     opacity: 0,
@@ -23,4 +30,4 @@ document.addEventListener("DOMContentLoaded", (event) => {
       },
     });
   });
-});
+}

@@ -1,13 +1,20 @@
+export function initAboutPage() {
+  document.fonts.ready.then(() => {
+    initSplitScroll();
+  });
+}
+
 // Split scroll effect
 //https://www.youtube.com/watch?v=3ePl0OnmG3Y
 
-document.addEventListener("DOMContentLoaded", () => {
+function initSplitScroll() {
   gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
   const verticalScroll = document.querySelector(".vertical-scroll");
   const leftColumn = document.querySelector(".left-column");
   const rightColumn = document.querySelector(".right-column");
   const images = gsap.utils.toArray(".img-wrapper img");
+  if (!verticalScroll || !leftColumn || !rightColumn || !images) return;
 
   gsap
     .timeline({
@@ -44,4 +51,4 @@ document.addEventListener("DOMContentLoaded", () => {
     invalidateOnRefresh: true,
     pin: true,
   });
-});
+}

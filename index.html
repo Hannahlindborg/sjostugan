@@ -11,15 +11,17 @@
       href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
       rel="stylesheet"
     />
-    <!---- <script src="global.js" defer></script>-->
-    <script src="homepage.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollSmoother.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/SplitText.min.js"></script>
+    <script type="module" src="global.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/SplitText.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollSmoother.min.js"></script>
+    <script src="https://unpkg.com/@swup/head-plugin@2"></script>
+    <link rel="stylesheet" href="/blaze.css" type="text/css" />
     <script src="https://unpkg.com/blaze-slider@latest/dist/blaze-slider.min.js"></script>
   </head>
-  <body>
+  <body data-page="home">
     <header>
       <nav class="top-menu">
         <ul>
@@ -30,6 +32,8 @@
           <li><a href="/about.html">About Us</a></li>
         </ul>
       </nav>
+    </header>
+    <main id="swup" class="transition-main">
       <div class="hero-container">
         <video autoplay muted loop playsinline>
           <source src="b&b-images/hero-video.mp4" type="video/mp4" />
@@ -44,304 +48,309 @@
           <h1 id="hero-title">Sjöstugan B&B</h1>
         </div>
       </div>
-    </header>
-    <div class="introduction-section">
-      <div class="overlay"></div>
-      <div class="vertical-scroll">
-        <div class="column" class="introduction-text">
-          <div class="text-column">
-            <span id="introduction-cursive">
-              Family run Bed & Breakfast in the heart of Dalecarlia
-            </span>
-            <br />
-            <span>
-              Wake up to a traditional Swedish breakfast overlooking the idyllic
-              Lake Siljan.</span
-            >
-            <span>Your unforgettable escape starts here.</span>
-            <span>
-              Explore our fully equipped cabins and book your restful retreat.
-            </span>
+      <div class="introduction-section">
+        <div class="overlay"></div>
+        <div class="vertical-scroll">
+          <div class="column" class="introduction-text">
+            <div class="text-column">
+              <span id="introduction-cursive">
+                Family run Bed & Breakfast in the heart of Dalecarlia
+              </span>
+              <br />
+              <span>
+                Wake up to a traditional Swedish breakfast overlooking the
+                idyllic Lake Siljan.</span
+              >
+              <span>Your unforgettable escape starts here.</span>
+              <span>
+                Explore our fully equipped cabins and book your restful retreat.
+              </span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div id="introduction-kurbits">
-      <img src="b&b-images/graphics/kurbits-blå.png" alt="" />
-    </div>
-    <div class="cabin-page">
-      <h2 id="cabin-title">Our Cabins</h2>
-      <p>
-        We have 5 fully equipt cabins on our property and In total 30 available
-        beds. From our cozy 2 person hut to the Storstuga housing up to 8
-        people. We have something for everyone- find which cabin is perfect for
-        your getaway.
-      </p>
-      <a class="nav-link" href="cabins.html"
-        >Check Out all of our available Accommodations →
-      </a>
-      <a href="cabins.html" id="cabin-images-1">
-        <img src="b&b-images/cabin-bedroom.jpg" alt="" />
-      </a>
-      <a href="cabins.html" id="cabin-images-2">
-        <img src="b&b-images/lantern-cabin.jpg" alt=""
-      /></a>
-    </div>
-    <div class="breakfast-section">
-      <div class="overlay"></div>
-      <div class="breakfast-info">
-        <span>Our homemade breakfast is included in every stay.</span>
-        <span id="breakfast-cursive">Everyday 7-11 am</span>
+      <div id="introduction-kurbits">
+        <img src="b&b-images/graphics/kurbits-blå.png" alt="" />
       </div>
-    </div>
-    <div id="explore-container" class="explore">
-      <h2 id="explore-title">Explore The Area</h2>
-      <div class="explore-lake">
-        <img src="b&b-images/lake-boat.jpg" alt="" />
-        <p>Rent a boat for a day on the lake</p>
+      <div class="cabin-page">
+        <h2 id="cabin-title">Our Cabins</h2>
+        <p>
+          We have 5 fully equipt cabins on our property and In total 30
+          available beds. From our cozy 2 person hut to the Storstuga housing up
+          to 8 people. We have something for everyone- find which cabin is
+          perfect for your getaway.
+        </p>
+        <a class="nav-link" href="cabins.html"
+          >Check Out all of our available Accommodations →
+        </a>
+        <a href="cabins.html" id="cabin-images-1">
+          <img src="b&b-images/cabin-bedroom.jpg" alt="" />
+        </a>
+        <a href="cabins.html" id="cabin-images-2">
+          <img src="b&b-images/lantern-cabin.jpg" alt=""
+        /></a>
       </div>
-      <div class="explore-hike">
-        <img src="b&b-images/njupeskär-hike.jpg" alt="" />
-        <p>Explore hiking trails for all levels</p>
+      <div class="breakfast-section">
+        <div class="overlay"></div>
+        <div class="breakfast-info">
+          <span>Our homemade breakfast is included in every stay.</span>
+          <span id="breakfast-cursive">Everyday 7-11 am</span>
+        </div>
       </div>
-      <div class="explore-midsommar">
-        <img src="b&b-images/midsommar.jpg" alt="" />
-        <p>Experience a traditional midsummer celebration</p>
+      <div id="explore-container" class="explore">
+        <h2 id="explore-title">Explore The Area</h2>
+        <div class="explore-lake">
+          <img src="b&b-images/lake-boat.jpg" alt="" />
+          <p>Rent a boat for a day on the lake</p>
+        </div>
+        <div class="explore-hike">
+          <img src="b&b-images/njupeskär-hike.jpg" alt="" />
+          <p>Explore hiking trails for all levels</p>
+        </div>
+        <div class="explore-midsommar">
+          <img src="b&b-images/midsommar.jpg" alt="" />
+          <p>Experience a traditional midsummer celebration</p>
+        </div>
+        <div class="explore-rättvik">
+          <img src="b&b-images/rättvik-pir.jpg" alt="" />
+          <p>Have a beachday at the pier</p>
+        </div>
       </div>
-      <div class="explore-rättvik">
-        <img src="b&b-images/rättvik-pir.jpg" alt="" />
-        <p>Have a beachday at the pier</p>
-      </div>
-    </div>
-    <div class="testimonials">
-      <h3>What our guests have said</h3>
-      <div class="blaze-slider" id="testimonialSlider">
-        <div class="blaze-container">
-          <div class="blaze-track-container">
-            <div class="blaze-track">
-              <div class="testimonial-slide">
-                <div class="testimonial-card">
-                  <svg
-                    id="left-quote-icon"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="currentColor"
-                      fill-rule="evenodd"
-                      d="M9.213 12.75c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 9 5.75H5A1.75 1.75 0 0 0 3.25 7.5V11c0 .966.784 1.75 1.75 1.75zm10 0c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 19 5.75h-4a1.75 1.75 0 0 0-1.75 1.75V11c0 .966.784 1.75 1.75 1.75z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                  <span
-                    >The location is truly unbeatable. We woke up to an idyllic
-                    view every morning, and the cabin itself was perfectly cozy
-                    and spotless. It was the peaceful retreat we needed,
-                    offering a wonderful blend of natural beauty and home
-                    comforts. We definitely recommend this hidden gem</span
-                  >
-                  <svg
-                    id="right-quote-icon"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="currentColor"
-                      fill-rule="evenodd"
-                      d="M9.213 12.75c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 9 5.75H5A1.75 1.75 0 0 0 3.25 7.5V11c0 .966.784 1.75 1.75 1.75zm10 0c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 19 5.75h-4a1.75 1.75 0 0 0-1.75 1.75V11c0 .966.784 1.75 1.75 1.75z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                  <div class="testimonial-user">
-                    <p>Liam and Sarah J.</p>
-                    <p>(Stayed in Lillstugan, May 2025)</p>
+      <div class="testimonials">
+        <h3>What our guests have said</h3>
+        <div class="blaze-slider" id="testimonialSlider">
+          <div class="blaze-container">
+            <div class="blaze-track-container">
+              <div class="blaze-track">
+                <div class="testimonial-slide">
+                  <div class="testimonial-card">
+                    <svg
+                      id="left-quote-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        fill-rule="evenodd"
+                        d="M9.213 12.75c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 9 5.75H5A1.75 1.75 0 0 0 3.25 7.5V11c0 .966.784 1.75 1.75 1.75zm10 0c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 19 5.75h-4a1.75 1.75 0 0 0-1.75 1.75V11c0 .966.784 1.75 1.75 1.75z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    <span
+                      >The location is truly unbeatable. We woke up to an
+                      idyllic view every morning, and the cabin itself was
+                      perfectly cozy and spotless. It was the peaceful retreat
+                      we needed, offering a wonderful blend of natural beauty
+                      and home comforts. We definitely recommend this hidden
+                      gem</span
+                    >
+                    <svg
+                      id="right-quote-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        fill-rule="evenodd"
+                        d="M9.213 12.75c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 9 5.75H5A1.75 1.75 0 0 0 3.25 7.5V11c0 .966.784 1.75 1.75 1.75zm10 0c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 19 5.75h-4a1.75 1.75 0 0 0-1.75 1.75V11c0 .966.784 1.75 1.75 1.75z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    <div class="testimonial-user">
+                      <p>Liam and Sarah J.</p>
+                      <p>(Stayed in Lillstugan, May 2025)</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="testimonial-slide">
-                <div class="testimonial-card">
-                  <svg
-                    id="left-quote-icon"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="currentColor"
-                      fill-rule="evenodd"
-                      d="M9.213 12.75c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 9 5.75H5A1.75 1.75 0 0 0 3.25 7.5V11c0 .966.784 1.75 1.75 1.75zm10 0c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 19 5.75h-4a1.75 1.75 0 0 0-1.75 1.75V11c0 .966.784 1.75 1.75 1.75z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                  <span
-                    >I travel frequently for work, and this was a breath of
-                    fresh air. The hosts were incredibly attentive, ensuring I
-                    had everything I needed without being intrusive. The quality
-                    of the amenities, from the fresh linens to the quiet
-                    workspace, was exceptional. It felt less like a rental and
-                    more like visiting old friends</span
-                  >
-                  <svg
-                    id="right-quote-icon"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="currentColor"
-                      fill-rule="evenodd"
-                      d="M9.213 12.75c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 9 5.75H5A1.75 1.75 0 0 0 3.25 7.5V11c0 .966.784 1.75 1.75 1.75zm10 0c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 19 5.75h-4a1.75 1.75 0 0 0-1.75 1.75V11c0 .966.784 1.75 1.75 1.75z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                  <div class="review-user">
-                    <p>David K.</p>
-                    <p>(Stayed in Björkstugan, October 2025)</p>
+                <div class="testimonial-slide">
+                  <div class="testimonial-card">
+                    <svg
+                      id="left-quote-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        fill-rule="evenodd"
+                        d="M9.213 12.75c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 9 5.75H5A1.75 1.75 0 0 0 3.25 7.5V11c0 .966.784 1.75 1.75 1.75zm10 0c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 19 5.75h-4a1.75 1.75 0 0 0-1.75 1.75V11c0 .966.784 1.75 1.75 1.75z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    <span
+                      >I travel frequently for work, and this was a breath of
+                      fresh air. The hosts were incredibly attentive, ensuring I
+                      had everything I needed without being intrusive. The
+                      quality of the amenities, from the fresh linens to the
+                      quiet workspace, was exceptional. It felt less like a
+                      rental and more like visiting old friends</span
+                    >
+                    <svg
+                      id="right-quote-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        fill-rule="evenodd"
+                        d="M9.213 12.75c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 9 5.75H5A1.75 1.75 0 0 0 3.25 7.5V11c0 .966.784 1.75 1.75 1.75zm10 0c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 19 5.75h-4a1.75 1.75 0 0 0-1.75 1.75V11c0 .966.784 1.75 1.75 1.75z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    <div class="review-user">
+                      <p>David K.</p>
+                      <p>(Stayed in Björkstugan, October 2025)</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="testimonial-slide">
-                <div class="testimonial-card">
-                  <svg
-                    id="left-quote-icon"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="currentColor"
-                      fill-rule="evenodd"
-                      d="M9.213 12.75c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 9 5.75H5A1.75 1.75 0 0 0 3.25 7.5V11c0 .966.784 1.75 1.75 1.75zm10 0c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 19 5.75h-4a1.75 1.75 0 0 0-1.75 1.75V11c0 .966.784 1.75 1.75 1.75z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                  <span
-                    >A fantastic find! The kids loved exploring the grounds, and
-                    the Storstugan cabin provided plenty of space for our family
-                    of four. The home-made breakfast was a highlight—so fresh
-                    and delicious every day. Considering the high quality of the
-                    accommodations and the personalized service, the value for
-                    money is outstanding. We will be back next summer!</span
-                  >
-                  <svg
-                    id="right-quote-icon"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="currentColor"
-                      fill-rule="evenodd"
-                      d="M9.213 12.75c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 9 5.75H5A1.75 1.75 0 0 0 3.25 7.5V11c0 .966.784 1.75 1.75 1.75zm10 0c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 19 5.75h-4a1.75 1.75 0 0 0-1.75 1.75V11c0 .966.784 1.75 1.75 1.75z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                  <div class="review-user">
-                    <p>The Håkansson family</p>
-                    <p>(Stayed in Storstugan, July 2025)</p>
+                <div class="testimonial-slide">
+                  <div class="testimonial-card">
+                    <svg
+                      id="left-quote-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        fill-rule="evenodd"
+                        d="M9.213 12.75c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 9 5.75H5A1.75 1.75 0 0 0 3.25 7.5V11c0 .966.784 1.75 1.75 1.75zm10 0c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 19 5.75h-4a1.75 1.75 0 0 0-1.75 1.75V11c0 .966.784 1.75 1.75 1.75z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    <span
+                      >A fantastic find! The kids loved exploring the grounds,
+                      and the Storstugan cabin provided plenty of space for our
+                      family of four. The home-made breakfast was a highlight—so
+                      fresh and delicious every day. Considering the high
+                      quality of the accommodations and the personalized
+                      service, the value for money is outstanding. We will be
+                      back next summer!</span
+                    >
+                    <svg
+                      id="right-quote-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        fill-rule="evenodd"
+                        d="M9.213 12.75c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 9 5.75H5A1.75 1.75 0 0 0 3.25 7.5V11c0 .966.784 1.75 1.75 1.75zm10 0c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 19 5.75h-4a1.75 1.75 0 0 0-1.75 1.75V11c0 .966.784 1.75 1.75 1.75z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    <div class="review-user">
+                      <p>The Håkansson family</p>
+                      <p>(Stayed in Storstugan, July 2025)</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="testimonial-slide">
-                <div class="testimonial-card">
-                  <svg
-                    id="left-quote-icon"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="currentColor"
-                      fill-rule="evenodd"
-                      d="M9.213 12.75c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 9 5.75H5A1.75 1.75 0 0 0 3.25 7.5V11c0 .966.784 1.75 1.75 1.75zm10 0c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 19 5.75h-4a1.75 1.75 0 0 0-1.75 1.75V11c0 .966.784 1.75 1.75 1.75z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                  <span
-                    >A fantastic find! The kids loved exploring the grounds, and
-                    the Storstugan cabin provided plenty of space for our family
-                    of four. The home-made breakfast was a highlight—so fresh
-                    and delicious every day. Considering the high quality of the
-                    accommodations and the personalized service, the value for
-                    money is outstanding. We will be back next summer!</span
-                  >
-                  <svg
-                    id="right-quote-icon"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="currentColor"
-                      fill-rule="evenodd"
-                      d="M9.213 12.75c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 9 5.75H5A1.75 1.75 0 0 0 3.25 7.5V11c0 .966.784 1.75 1.75 1.75zm10 0c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 19 5.75h-4a1.75 1.75 0 0 0-1.75 1.75V11c0 .966.784 1.75 1.75 1.75z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                  <div class="testimonial-user">
-                    <p>The Håkansson family</p>
-                    <p>(Stayed in Storstugan, July 2025)</p>
+                <div class="testimonial-slide">
+                  <div class="testimonial-card">
+                    <svg
+                      id="left-quote-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        fill-rule="evenodd"
+                        d="M9.213 12.75c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 9 5.75H5A1.75 1.75 0 0 0 3.25 7.5V11c0 .966.784 1.75 1.75 1.75zm10 0c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 19 5.75h-4a1.75 1.75 0 0 0-1.75 1.75V11c0 .966.784 1.75 1.75 1.75z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    <span
+                      >A fantastic find! The kids loved exploring the grounds,
+                      and the Storstugan cabin provided plenty of space for our
+                      family of four. The home-made breakfast was a highlight—so
+                      fresh and delicious every day. Considering the high
+                      quality of the accommodations and the personalized
+                      service, the value for money is outstanding. We will be
+                      back next summer!</span
+                    >
+                    <svg
+                      id="right-quote-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        fill-rule="evenodd"
+                        d="M9.213 12.75c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 9 5.75H5A1.75 1.75 0 0 0 3.25 7.5V11c0 .966.784 1.75 1.75 1.75zm10 0c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 19 5.75h-4a1.75 1.75 0 0 0-1.75 1.75V11c0 .966.784 1.75 1.75 1.75z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    <div class="testimonial-user">
+                      <p>The Håkansson family</p>
+                      <p>(Stayed in Storstugan, July 2025)</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="page-dots-container">
-            <span data-blaze-nav></span>
+            <div class="page-dots-container">
+              <span data-blaze-nav></span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </main>
     <footer id="footer-container">
       <div id="footer-overlay"></div>
       <div class="footer-content">
         <img id="footer-logo" src="b&b-images/graphics/SVG/Asset 1.svg" />
-        <div class="contact-row">
-          <h4>Contact us</h4>
-          <ul>
-            <li>sjöstugan@gmail.com</li>
-            <li>Address, adress</li>
-            <li>+46 xxxxxxx</li>
-          </ul>
-        </div>
-        <div class="socials-row">
-          <h4>Socials</h4>
-          <div class="social-icons">
-            <div class="social-icon-container">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="currentColor"
-                  d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"
-                />
-              </svg>
-            </div>
-            <div class="social-icon-container">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="currentColor"
-                  d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95"
-                />
-              </svg>
+        <div class="footer-information">
+          <div class="contact-row">
+            <h4>Contact us</h4>
+            <ul>
+              <li>sjöstugan@gmail.com</li>
+              <li>Address, adress</li>
+              <li>+46 xxxxxxx</li>
+            </ul>
+          </div>
+          <div class="socials-row">
+            <h4>Socials</h4>
+            <div class="social-icons">
+              <div class="social-icon-container">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"
+                  />
+                </svg>
+              </div>
+              <div class="social-icon-container">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
         </div>

@@ -87,7 +87,7 @@ h3 {
 
 .cabin {
   grid-column: 2 / span 8;
-  background-color: #f2e2d8;
+  background-color: #ffeee3;
 
   display: grid;
   grid-template-columns: repeat(10, 1fr);
@@ -110,7 +110,7 @@ https://www.google.com/search?q=partial+frame+border+css&oq=partial+frame+border
   width: 50px;
   height: 200px;
   left: -50px;
-  border: 50px solid #f2e2d8;
+  border: 50px solid #ffeee3;
 }
 
 #lillstugan {

@@ -17,15 +17,18 @@
     />
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link href="cabinpage.css" rel="stylesheet" type="text/css" />
-    <script src="cabin.js" defer></script>
-    <script src="global.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollToPlugin.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/SplitText.min.js"></script>
+    <script type="module" src="global.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/SplitText.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollSmoother.min.js"></script>
+    <script src="https://unpkg.com/@swup/head-plugin@2"></script>
+    <link rel="stylesheet" href="/blaze.css" type="text/css" />
+    <script src="https://unpkg.com/blaze-slider@latest/dist/blaze-slider.min.js"></script>
     <title>Björkstugan</title>
   </head>
-  <body>
+  <body data-page="cabin">
     <header>
       <nav class="top-menu">
         <ul>
@@ -37,614 +40,621 @@
         </ul>
       </nav>
     </header>
-    <img id="cabin-kurbits" src="b&b-images/graphics/kurbits-blå-rotated.PNG" />
-    <div class="cabin-gallery-section">
-      <h1 id="title">Torpet</h1>
-      <div class="cabin-gallery-container">
-        <div class="gallery-preview">
-          <img id="main-image" src="b&b-images/cabin-diningroom.jpg" alt="" />
+    <main id="swup" class="transition-main">
+      <img
+        id="cabin-kurbits"
+        src="b&b-images/graphics/kurbits-blå-rotated.PNG"
+      />
+      <div class="cabin-gallery-section">
+        <h1 id="title">Torpet</h1>
+        <div class="cabin-gallery-container">
+          <div class="gallery-preview">
+            <img id="main-image" src="b&b-images/cabin-diningroom.jpg" alt="" />
+          </div>
+          <div class="thumbnail-grid">
+            <img
+              class="thumbnail thumbnail-active"
+              src="b&b-images/cabin-diningroom.jpg"
+              data-largesrc="b&b-images/cabin-diningroom.jpg"
+              alt=""
+            />
+            <img
+              class="thumbnail"
+              src="b&b-images/cabin-bedroom.jpg"
+              data-largesrc="b&b-images/cabin-bedroom.jpg"
+              alt=""
+            />
+            <img
+              class="thumbnail"
+              src="b&b-images/cabin-kitchen.jpg"
+              data-largesrc="b&b-images/cabin-kitchen.jpg"
+              alt=""
+            />
+          </div>
         </div>
-        <div class="thumbnail-grid">
-          <img
-            class="thumbnail thumbnail-active"
-            src="b&b-images/cabin-diningroom.jpg"
-            data-largesrc="b&b-images/cabin-diningroom.jpg"
-            alt=""
-          />
-          <img
-            class="thumbnail"
-            src="b&b-images/cabin-bedroom.jpg"
-            data-largesrc="b&b-images/cabin-bedroom.jpg"
-            alt=""
-          />
-          <img
-            class="thumbnail"
-            src="b&b-images/cabin-kitchen.jpg"
-            data-largesrc="b&b-images/cabin-kitchen.jpg"
-            alt=""
-          />
-        </div>
-      </div>
-      <div class="cabin-gallery-text">
-        <p>
-          Björkstugan is a light and inviting cabin named after the graceful
-          birch trees that surround it. With its gentle, nature-inspired
-          aesthetic, the cabin offers a calming atmosphere perfect for unwinding
-          and reconnecting with the outdoors. Sunlight filters through the
-          windows and highlights the soft wooden interiors, giving the space a
-          warm and peaceful feel. Björkstugan includes a compact but
-          well-equipped kitchenette, a cozy living area, and a comfortable
-          bedroom with a double bed. Ideal for couples or solo travelers, it
-          provides a serene retreat nestled among the birch trees.
-        </p>
-        <a class="nav-link" href="#booking-section">Book Now →</a>
-      </div>
-    </div>
-    <div class="amenities">
-      <div class="amenities-container">
-        <h3>Amenities included</h3>
-        <div class="icon-grid">
-          <div class="icon-container">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="56"
-              height="56"
-              viewBox="0 0 24 24"
-            >
-              <path
-                fill="currentColor"
-                d="M7 14c1.66 0 3-1.34 3-3S8.66 8 7 8s-3 1.34-3 3s1.34 3 3 3m0-4c.55 0 1 .45 1 1s-.45 1-1 1s-1-.45-1-1s.45-1 1-1m12-3h-8v8H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4m2 8h-8V9h6c1.1 0 2 .9 2 2Z"
-              />
-            </svg>
-            <p>8 beds</p>
-          </div>
-          <div class="icon-container">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="56"
-              height="56"
-              viewBox="0 0 256 256"
-            >
-              <path
-                fill="currentColor"
-                d="m217.9 110.1l-80-80a14 14 0 0 0-19.8 0l-80 80A13.92 13.92 0 0 0 34 120v96a6 6 0 0 0 6 6h64a6 6 0 0 0 6-6v-58h36v58a6 6 0 0 0 6 6h64a6 6 0 0 0 6-6v-96a13.92 13.92 0 0 0-4.1-9.9M210 210h-52v-58a6 6 0 0 0-6-6h-48a6 6 0 0 0-6 6v58H46v-90a2 2 0 0 1 .58-1.42l80-80a2 2 0 0 1 2.84 0l80 80A2 2 0 0 1 210 120Z"
-              />
-            </svg>
-            <p>30 square meters</p>
-          </div>
-          <div class="icon-container">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="56"
-              height="56"
-              viewBox="0 0 24 24"
-            >
-              <path
-                fill="currentColor"
-                d="M12.5 3C7.8 3 4 5.7 4 9c0 1.2.5 2.3 1.4 3.3A6.8 6.8 0 0 0 4 16.5V20c0 1.1.9 2 2 2h13a2 2 0 0 0 2-2v-3.5c0-1.2-.3-2.4-1-3.5l2-2l-3-3l-2.1 2.1a9.2 9.2 0 0 0-9.3.3A2 2 0 0 1 7 9c0-1.8 2.5-3.3 5.5-3.3c1.4 0 2.8.4 3.8 1l2-2A10 10 0 0 0 12.5 3m0 8c3.5 0 6.5 3 6.5 5.5V20H6v-3.5C6 14 9 11 12.5 11m.5 1.5c-3 0-5 1.5-5 4.5v1h2v-1c0-1 0-3.5 3-4.5"
-              />
-            </svg>
-            <p>Waterheater</p>
-          </div>
-          <div class="icon-container">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="56"
-              height="56"
-              viewBox="0 0 49 48"
-            >
-              <g fill="none">
-                <rect
-                  width="56"
-                  height="56"
-                  x="8.778"
-                  y="4"
-                  stroke="currentColor"
-                  stroke-width="4"
-                  rx="2"
-                />
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="4"
-                  d="M8.778 15.5h32"
-                />
-                <circle cx="28.778" cy="10" r="2" fill="currentColor" />
-                <circle cx="34.778" cy="10" r="2" fill="currentColor" />
-                <circle
-                  cx="24.778"
-                  cy="30"
-                  r="7"
-                  stroke="currentColor"
-                  stroke-width="4"
-                />
-              </g>
-            </svg>
-            <p>Washingmachine</p>
-          </div>
-          <div class="icon-container">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="56"
-              height="56"
-              viewBox="0 0 512 512"
-            >
-              <path
-                fill="currentColor"
-                d="m133.2 25l-53.69 94H432.5l-53.7-94zM25 137v46h462v-46zm32 64v46h46v-46zm352 0v46h46v-46zm-171.4.6s-22 8.8-24 18.8c-4.6 22.8 33.9 60.8 33.9 60.8s-13.3-34.6-14.3-52.8c-.5-9.1 4.4-26.8 4.4-26.8m54.4 14.8c-6.1 40.2-11.2 83.7-45.9 100.2c-30.3 14.4-36.4-78.5-94.1-91.5c44.9 101.1-68.9 139.9 42.2 185.2h19.5c-24-25.9-34.4-90.8-34.4-90.8s30.2 72 62.5 74.2c15 1 33.5-30.2 33.5-30.2s5.9 29.8-.1 46.8H319c27.3-14.8 44.6-35.7 51.2-57.3c6.5-20.9 3-42.5-10.9-59.9c-8.6 51.8-21.4 62.8-55.1 74.1c36.6-44.7 20.2-119.2-12.2-150.8M57 265v46h46v-46zm352 0v46h46v-46zM57 329v78h46v-78zm352 0v78h46v-78zM25 425v62h462v-62z"
-              />
-            </svg>
-            <p>Fireplace</p>
-          </div>
-          <div class="icon-container">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="56"
-              height="56"
-              viewBox="0 0 640 640"
-            >
-              <path
-                fill="currentColor"
-                d="M272 208c0-53-43-96-96-96s-96 43-96 96s43 96 96 96s96-43 96-96m44.4 32c-14.5 64.1-71.9 112-140.4 112c-79.5 0-144-64.5-144-144S96.5 64 176 64c68.5 0 125.9 47.9 140.4 112h71.8c8.8-9.8 21.6-16 35.8-16h104c26.5 0 48 21.5 48 48s-21.5 48-48 48H424c-14.2 0-27-6.2-35.8-16zM176 144c35.3 0 64 28.7 64 64s-28.7 64-64 64s-64-28.7-64-64s28.7-64 64-64m256 160c13.3 0 24 10.7 24 24v8h96c13.3 0 24 10.7 24 24s-10.7 24-24 24H312c-13.3 0-24-10.7-24-24s10.7-24 24-24h96v-8c0-13.3 10.7-24 24-24M320 528V416h224v112c0 26.5-21.5 48-48 48H368c-26.5 0-48-21.5-48-48M80 384h128c26.5 0 48 21.5 48 48s-21.5 48-48 48h-16c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32v-80c0-8.8 7.2-16 16-16m128 64c8.8 0 16-7.2 16-16s-7.2-16-16-16h-16v32zM56 528h176c13.3 0 24 10.7 24 24s-10.7 24-24 24H56c-13.3 0-24-10.7-24-24s10.7-24 24-24"
-              />
-            </svg>
-            <p>Kitchen starter kit</p>
-          </div>
-          <div class="icon-container">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="56"
-              height="56"
-              viewBox="0 0 24 24"
-            >
-              <path
-                fill="currentColor"
-                d="M11.436 11.019h1.4v-.7h-1.123l-.938-3.94a.35.35 0 0 0-.341-.27H8.93a.35.35 0 0 0-.341.27l-.939 3.94H6.524v.7zM9.207 6.808h.949l.836 3.509H8.371Zm1.527 8.071H8.629a.35.35 0 0 0-.351.35v1.755a.35.35 0 0 0 .351.351h2.105a.35.35 0 0 0 .351-.351v-1.755a.35.35 0 0 0-.351-.35m-.35 1.754H8.98V15.58h1.4zm-4.211-1.754h.702v1.754h-.702zm11.228-2.457h.702v1.754h-.702zm0-3.157h.702v1.754h-.702zm4.211-2.457H16.7a.35.35 0 0 0-.35.351v6.667H2.313a.35.35 0 0 0-.35.351v4.21a.35.35 0 0 0 .35.351h19.3a.35.35 0 0 0 .351-.351V7.159a.35.35 0 0 0-.352-.351m-5.263 9.123h-4.211v-1.4h4.211zm-13.685-1.4h4.562v3.509H2.664Zm5.263 0h3.509v1.4h-.012v.7h.012v1.4H7.927Zm4.211 2.1h4.211v1.4h-4.211zm9.123 1.4H17.05v-5.959h4.211zM17.05 11.37V7.51h4.211v3.86z"
-              />
-            </svg>
-            <p>Stove & Fridge</p>
-          </div>
-          <div class="icon-container">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="56"
-              height="56"
-              viewBox="0 0 24 24"
-            >
-              <path
-                fill="currentColor"
-                d="M12 21q-1.05 0-1.775-.725T9.5 18.5t.725-1.775T12 16t1.775.725t.725 1.775t-.725 1.775T12 21m-5.65-5.65l-2.1-2.15q1.475-1.475 3.463-2.337T12 10t4.288.875t3.462 2.375l-2.1 2.1q-1.1-1.1-2.55-1.725T12 13t-3.1.625t-2.55 1.725M2.1 11.1L0 9q2.3-2.35 5.375-3.675T12 4t6.625 1.325T24 9l-2.1 2.1q-1.925-1.925-4.462-3.012T12 7T6.563 8.088T2.1 11.1"
-              />
-            </svg>
-            <p>Wifi</p>
-          </div>
-          <div class="icon-container">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="56"
-              height="56"
-              viewBox="0 0 24 24"
-            >
-              <path
-                fill="currentColor"
-                d="M4.616 18q-.691 0-1.153-.462T3 16.384V5.616q0-.691.463-1.153T4.615 4h14.77q.69 0 1.152.463T21 5.616v10.769q0 .69-.463 1.153T19.385 18H15v1.192q0 .349-.23.578t-.578.23H9.808q-.348 0-.578-.23T9 19.192V18zm0-1h14.769q.23 0 .423-.192t.192-.424V5.616q0-.231-.192-.424T19.385 5H4.615q-.23 0-.423.192T4 5.616v10.769q0 .23.192.423t.423.192M4 17V5z"
-              />
-            </svg>
-            <p>50" TV</p>
-          </div>
-          <div class="icon-container">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="56"
-              height="56"
-              viewBox="0 0 32 32"
-            >
-              <path
-                fill="currentColor"
-                d="M21 1a2 2 0 0 0-2 2v9H3.5A2.5 2.5 0 0 0 1 14.5v2a1.5 1.5 0 0 0 1.414 1.498a11 11 0 0 0 3.396 5.327c.549.474 1.145.896 1.782 1.256L6.097 27.57c-.093.186-.227.453-.328.733c-.1.277-.21.678-.158 1.11c.06.5.332.959.832 1.25c.44.254.982.337 1.557.337h14c.825 0 1.567-.402 2.082-.918c.515-.515.918-1.257.918-2.082v-8c0-.268.155-.627.445-1.024A4 4 0 0 0 29 15V3a2 2 0 0 0-2-2zM9.416 25.403A11 11 0 0 0 13 26c4.22 0 8.114-2.081 10-5.582V28c0 .175-.098.433-.332.668S22.175 29 22 29H8q-.218-.001-.349-.02c.058-.159.142-.33.243-.533zM20.5 17c.334.445.814.775 1.368.92C20.811 21.587 17.223 24 13 24c-2.29 0-4.38-.855-5.968-2.263A9 9 0 0 1 4.222 17zm-.45-1H3v-1.5a.5.5 0 0 1 .5-.5H20v1.5q0 .257.05.5M27 15a2 2 0 0 1-2 2h-2.5a1.5 1.5 0 0 1-1.5-1.5V3h6z"
-              />
-            </svg>
-            <p>Private bathroom</p>
-          </div>
-          <div class="icon-container">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="56"
-              height="56"
-              viewBox="0 0 15 15"
-            >
-              <path
-                fill="currentColor"
-                d="M6.5 1c1.5 0 2.5.5 3 1c0 .5-4 5.5-4.5 5.5s-.88-.39-1-1C3.24 8.12 2 12 1.5 14c0 .5-1.5.5-1.5 0S1.47 5.37 3.5 3c.97-1.13 2-2 3-2m7.14 9.14c.2.19.37.33.54.52c.18.18-.32.69-.51.54c-.2-.15-.28-.24-.55-.52c-.26-.27.32-.73.52-.54m-1.63-1.55c-.25-.26-.73.35-.51.54c.21.19.33.31.54.52s.74-.34.52-.55c-.23-.2-.29-.26-.55-.51m-1.62-1.56c-.18-.17-.68.39-.52.55c.26.25.36.34.54.51s.75-.32.52-.54c-.23-.21-.37-.35-.54-.52M8.76 5.48c-.24-.23-.79.29-.52.54c.27.26.35.36.54.52s.69-.38.52-.54s-.33-.32-.54-.52m2.77 7.04c-.24-.35-.76.25-.58.47s.3.37.47.58s.78-.23.58-.47c-.19-.25-.2-.26-.47-.58m-1.41-1.75c-.18-.22-.81.17-.58.47c.22.3.24.29.47.58c.22.29.74-.27.58-.47s-.31-.39-.47-.58M8.71 9.02c-.25-.31-.8.2-.59.47c.22.26.3.39.47.58c.18.19.82-.16.59-.47c-.17-.23-.24-.3-.47-.58M7.29 7.26c-.35-.31-.85.15-.58.48s.29.37.47.58s.79-.23.58-.47c-.2-.25-.34-.43-.47-.59m6.58-.93c-.29-.19-.6.48-.44.61s.38.28.61.44c.22.16.6-.47.44-.61c-.17-.14-.26-.2-.61-.44m-1.83-1.32c-.23-.15-.66.47-.44.61c.24.19.38.27.61.44s.63-.48.44-.61a8 8 0 0 0-.61-.44M10.22 3.7c-.24-.18-.66.44-.44.6c.22.17.41.31.61.44c.2.14.66-.43.44-.6c-.19-.16-.35-.25-.61-.44"
-              />
-            </svg>
-            <p>Shower</p>
-          </div>
-          <div class="icon-container">
-            <img src="" alt="" />
-            <p>....</p>
-          </div>
+        <div class="cabin-gallery-text">
+          <p>
+            Björkstugan is a light and inviting cabin named after the graceful
+            birch trees that surround it. With its gentle, nature-inspired
+            aesthetic, the cabin offers a calming atmosphere perfect for
+            unwinding and reconnecting with the outdoors. Sunlight filters
+            through the windows and highlights the soft wooden interiors, giving
+            the space a warm and peaceful feel. Björkstugan includes a compact
+            but well-equipped kitchenette, a cozy living area, and a comfortable
+            bedroom with a double bed. Ideal for couples or solo travelers, it
+            provides a serene retreat nestled among the birch trees.
+          </p>
+          <a class="nav-link" href="#booking-section">Book Now →</a>
         </div>
       </div>
-    </div>
-
-    <div class="testimonials">
-      <h3>Guest Reviews for Björkstugan</h3>
-      <div class="testimonial-slideshow">
-        <div class="testimonial-slide">
-          <div class="testimonial-container">
-            <div class="testimonial-card">
+      <div class="amenities">
+        <div class="amenities-container">
+          <h3>Amenities included</h3>
+          <div class="icon-grid">
+            <div class="icon-container">
               <svg
-                id="left-quote-icon"
                 xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
+                width="56"
+                height="56"
                 viewBox="0 0 24 24"
               >
                 <path
                   fill="currentColor"
-                  fill-rule="evenodd"
-                  d="M9.213 12.75c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 9 5.75H5A1.75 1.75 0 0 0 3.25 7.5V11c0 .966.784 1.75 1.75 1.75zm10 0c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 19 5.75h-4a1.75 1.75 0 0 0-1.75 1.75V11c0 .966.784 1.75 1.75 1.75z"
-                  clip-rule="evenodd"
+                  d="M7 14c1.66 0 3-1.34 3-3S8.66 8 7 8s-3 1.34-3 3s1.34 3 3 3m0-4c.55 0 1 .45 1 1s-.45 1-1 1s-1-.45-1-1s.45-1 1-1m12-3h-8v8H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4m2 8h-8V9h6c1.1 0 2 .9 2 2Z"
                 />
               </svg>
-              <span
-                >The location is truly unbeatable. We woke up to an idyllic view
-                every morning, and the cabin itself was perfectly cozy and
-                spotless. It was the peaceful retreat we needed, offering a
-                wonderful blend of natural beauty and home comforts. We
-                definitely recommend this hidden gem!</span
-              >
-              <svg
-                id="right-quote-icon"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="currentColor"
-                  fill-rule="evenodd"
-                  d="M9.213 12.75c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 9 5.75H5A1.75 1.75 0 0 0 3.25 7.5V11c0 .966.784 1.75 1.75 1.75zm10 0c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 19 5.75h-4a1.75 1.75 0 0 0-1.75 1.75V11c0 .966.784 1.75 1.75 1.75z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-              <div class="testimonial-user">
-                <p>Liam and Sarah J.</p>
-                <p>(Stayed in Lillstugan, May 2025)</p>
-              </div>
+              <p>8 beds</p>
             </div>
-            <div class="testimonial-card">
+            <div class="icon-container">
               <svg
-                id="left-quote-icon"
                 xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
+                width="56"
+                height="56"
+                viewBox="0 0 256 256"
               >
                 <path
                   fill="currentColor"
-                  fill-rule="evenodd"
-                  d="M9.213 12.75c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 9 5.75H5A1.75 1.75 0 0 0 3.25 7.5V11c0 .966.784 1.75 1.75 1.75zm10 0c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 19 5.75h-4a1.75 1.75 0 0 0-1.75 1.75V11c0 .966.784 1.75 1.75 1.75z"
-                  clip-rule="evenodd"
+                  d="m217.9 110.1l-80-80a14 14 0 0 0-19.8 0l-80 80A13.92 13.92 0 0 0 34 120v96a6 6 0 0 0 6 6h64a6 6 0 0 0 6-6v-58h36v58a6 6 0 0 0 6 6h64a6 6 0 0 0 6-6v-96a13.92 13.92 0 0 0-4.1-9.9M210 210h-52v-58a6 6 0 0 0-6-6h-48a6 6 0 0 0-6 6v58H46v-90a2 2 0 0 1 .58-1.42l80-80a2 2 0 0 1 2.84 0l80 80A2 2 0 0 1 210 120Z"
                 />
               </svg>
-              <span
-                >I travel frequently for work, and this was a breath of fresh
-                air. The hosts were incredibly attentive, ensuring I had
-                everything I needed without being intrusive. The quality of the
-                amenities, from the fresh linens to the quiet workspace, was
-                exceptional. It felt less like a rental and more like visiting
-                old friends</span
-              >
-              <svg
-                id="right-quote-icon"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="currentColor"
-                  fill-rule="evenodd"
-                  d="M9.213 12.75c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 9 5.75H5A1.75 1.75 0 0 0 3.25 7.5V11c0 .966.784 1.75 1.75 1.75zm10 0c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 19 5.75h-4a1.75 1.75 0 0 0-1.75 1.75V11c0 .966.784 1.75 1.75 1.75z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-              <div class="testimonial-user">
-                <p>David K.</p>
-                <p>(Stayed in Björkstugan, October 2025)</p>
-              </div>
+              <p>30 square meters</p>
             </div>
-          </div>
-        </div>
-        <div class="testimonial-slide">
-          <div class="testimonial-container">
-            <div class="testimonial-card">
+            <div class="icon-container">
               <svg
-                id="left-quote-icon"
                 xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
+                width="56"
+                height="56"
                 viewBox="0 0 24 24"
               >
                 <path
                   fill="currentColor"
-                  fill-rule="evenodd"
-                  d="M9.213 12.75c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 9 5.75H5A1.75 1.75 0 0 0 3.25 7.5V11c0 .966.784 1.75 1.75 1.75zm10 0c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 19 5.75h-4a1.75 1.75 0 0 0-1.75 1.75V11c0 .966.784 1.75 1.75 1.75z"
-                  clip-rule="evenodd"
+                  d="M12.5 3C7.8 3 4 5.7 4 9c0 1.2.5 2.3 1.4 3.3A6.8 6.8 0 0 0 4 16.5V20c0 1.1.9 2 2 2h13a2 2 0 0 0 2-2v-3.5c0-1.2-.3-2.4-1-3.5l2-2l-3-3l-2.1 2.1a9.2 9.2 0 0 0-9.3.3A2 2 0 0 1 7 9c0-1.8 2.5-3.3 5.5-3.3c1.4 0 2.8.4 3.8 1l2-2A10 10 0 0 0 12.5 3m0 8c3.5 0 6.5 3 6.5 5.5V20H6v-3.5C6 14 9 11 12.5 11m.5 1.5c-3 0-5 1.5-5 4.5v1h2v-1c0-1 0-3.5 3-4.5"
                 />
               </svg>
-              <span
-                >A fantastic find! The kids loved exploring the grounds, and the
-                Storstugan cabin provided plenty of space for our family of
-                four. The home-made breakfast was a highlight—so fresh and
-                delicious every day. Considering the high quality of the
-                accommodations and the personalized service, the value for money
-                is outstanding. We will be back next summer!</span
-              >
-              <svg
-                id="right-quote-icon"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="currentColor"
-                  fill-rule="evenodd"
-                  d="M9.213 12.75c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 9 5.75H5A1.75 1.75 0 0 0 3.25 7.5V11c0 .966.784 1.75 1.75 1.75zm10 0c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 19 5.75h-4a1.75 1.75 0 0 0-1.75 1.75V11c0 .966.784 1.75 1.75 1.75z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-              <div class="testimonial-user">
-                <p>The Håkansson family</p>
-                <p>(Stayed in Storstugan, July 2025)</p>
-              </div>
+              <p>Waterheater</p>
             </div>
-            <div class="testimonial-card">
+            <div class="icon-container">
               <svg
-                id="left-quote-icon"
                 xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
+                width="56"
+                height="56"
+                viewBox="0 0 49 48"
               >
-                <path
-                  fill="currentColor"
-                  fill-rule="evenodd"
-                  d="M9.213 12.75c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 9 5.75H5A1.75 1.75 0 0 0 3.25 7.5V11c0 .966.784 1.75 1.75 1.75zm10 0c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 19 5.75h-4a1.75 1.75 0 0 0-1.75 1.75V11c0 .966.784 1.75 1.75 1.75z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-              <span
-                >A fantastic find! The kids loved exploring the grounds, and the
-                Storstugan cabin provided plenty of space for our family of
-                four. The home-made breakfast was a highlight—so fresh and
-                delicious every day. Considering the high quality of the
-                accommodations and the personalized service, the value for money
-                is outstanding. We will be back next summer!</span
-              >
-              <svg
-                id="right-quote-icon"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="currentColor"
-                  fill-rule="evenodd"
-                  d="M9.213 12.75c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 9 5.75H5A1.75 1.75 0 0 0 3.25 7.5V11c0 .966.784 1.75 1.75 1.75zm10 0c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 19 5.75h-4a1.75 1.75 0 0 0-1.75 1.75V11c0 .966.784 1.75 1.75 1.75z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-              <div class="testimonial-user">
-                <p>The Håkansson family</p>
-                <p>(Stayed in Storstugan, July 2025)</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="page-dots">
-          <span
-            class="testimonial-dot"
-            id="slide1"
-            onClick="currentSlide(1)"
-          ></span>
-          <span
-            class="testimonial-dot"
-            id="slide2"
-            onClick="currentSlide(2)"
-          ></span>
-        </div>
-      </div>
-    </div>
-
-    <section id="booking-section">
-      <div class="form-container">
-        <!-- Timeline Navigation -->
-        <div class="timeline" id="stepNav">
-          <div class="timeline-step" data-step="0">
-            <div class="dot"></div>
-            <span>Personal</span>
-          </div>
-          <div class="line"></div>
-          <div class="timeline-step" data-step="1">
-            <div class="dot"></div>
-            <span>Room</span>
-          </div>
-          <div class="line"></div>
-          <div class="timeline-step" data-step="2">
-            <div class="dot"></div>
-            <span>Date</span>
-          </div>
-          <div class="line"></div>
-          <div class="timeline-step" data-step="3">
-            <div class="dot"></div>
-            <span>Other</span>
-          </div>
-          <div class="line"></div>
-          <div class="timeline-step" data-step="4">
-            <div class="dot"></div>
-            <span>Submit</span>
-          </div>
-        </div>
-
-        <form id="multiStepForm" name="contact" netlify>
-          <div class="steps-wrapper">
-            <!-- Step 1 -->
-            <div class="step-panel active" data-step="0">
-              <h2>Your information</h2>
-
-              <div class="field">
-                <label>Full Name</label>
-                <input type="text" id="name" />
-                <p class="error-text" id="nameError"></p>
-              </div>
-
-              <div class="field">
-                <label>Email</label>
-                <input type="email" id="email" />
-                <p class="error-text" id="emailError"></p>
-              </div>
-
-              <div class="field">
-                <label>Address</label>
-                <input type="text" id="address" />
-                <p class="error-text" id="addressError"></p>
-              </div>
-
-              <div class="field">
-                <label>Phone</label>
-                <input type="tel" id="phone" />
-                <p class="error-text" id="phoneError"></p>
-              </div>
-            </div>
-
-            <!-- Step 2 -->
-            <div class="step-panel" data-step="1">
-              <h2>Select Room</h2>
-
-              <div class="room-grid">
-                <label class="room-card">
-                  <input type="radio" name="room" value="lillstugan" />
-                  <span>Lillstugan</span>
-                </label>
-                <label class="room-card">
-                  <input type="radio" name="room" value="storstugan" />
-                  <span>Storstugan</span>
-                </label>
-                <label class="room-card">
-                  <input
-                    type="radio"
-                    name="room"
-                    value="björkstugan"
-                    id="björkstugan"
+                <g fill="none">
+                  <rect
+                    width="56"
+                    height="56"
+                    x="8.778"
+                    y="4"
+                    stroke="currentColor"
+                    stroke-width="4"
+                    rx="2"
                   />
-                  <span>Björkstugan</span>
-                </label>
-                <label class="room-card">
-                  <input type="radio" name="room" value="rorpet" />
-                  <span>Torpet</span>
-                </label>
-                <label class="room-card">
-                  <input type="radio" name="room" value="ladan" />
-                  <span>Ladan</span>
-                </label>
-
-                <p class="error-text" id="roomError"></p>
-              </div>
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="4"
+                    d="M8.778 15.5h32"
+                  />
+                  <circle cx="28.778" cy="10" r="2" fill="currentColor" />
+                  <circle cx="34.778" cy="10" r="2" fill="currentColor" />
+                  <circle
+                    cx="24.778"
+                    cy="30"
+                    r="7"
+                    stroke="currentColor"
+                    stroke-width="4"
+                  />
+                </g>
+              </svg>
+              <p>Washingmachine</p>
             </div>
-
-            <!-- Step 3 -->
-            <div class="step-panel" data-step="2">
-              <h2>Date</h2>
-
-              <div class="field">
-                <label>Arrival Date</label>
-                <input type="date" id="arrival-date" />
-                <p class="error-text" id="arrival-date-Error"></p>
-              </div>
-
-              <div class="field">
-                <label>Departure date</label>
-                <input type="date" id="departure-date" />
-                <p class="error-text" id="departure-date-Error"></p>
-              </div>
+            <div class="icon-container">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="56"
+                height="56"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  fill="currentColor"
+                  d="m133.2 25l-53.69 94H432.5l-53.7-94zM25 137v46h462v-46zm32 64v46h46v-46zm352 0v46h46v-46zm-171.4.6s-22 8.8-24 18.8c-4.6 22.8 33.9 60.8 33.9 60.8s-13.3-34.6-14.3-52.8c-.5-9.1 4.4-26.8 4.4-26.8m54.4 14.8c-6.1 40.2-11.2 83.7-45.9 100.2c-30.3 14.4-36.4-78.5-94.1-91.5c44.9 101.1-68.9 139.9 42.2 185.2h19.5c-24-25.9-34.4-90.8-34.4-90.8s30.2 72 62.5 74.2c15 1 33.5-30.2 33.5-30.2s5.9 29.8-.1 46.8H319c27.3-14.8 44.6-35.7 51.2-57.3c6.5-20.9 3-42.5-10.9-59.9c-8.6 51.8-21.4 62.8-55.1 74.1c36.6-44.7 20.2-119.2-12.2-150.8M57 265v46h46v-46zm352 0v46h46v-46zM57 329v78h46v-78zm352 0v78h46v-78zM25 425v62h462v-62z"
+                />
+              </svg>
+              <p>Fireplace</p>
             </div>
-
-            <!-- Step 4 -->
-            <div class="step-panel" data-step="3">
-              <h2>Additional Info</h2>
-
-              <div class="field">
-                <label>Message for sjöstugan</label>
-                <textarea id="notes" rows="4"></textarea>
-              </div>
+            <div class="icon-container">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="56"
+                height="56"
+                viewBox="0 0 640 640"
+              >
+                <path
+                  fill="currentColor"
+                  d="M272 208c0-53-43-96-96-96s-96 43-96 96s43 96 96 96s96-43 96-96m44.4 32c-14.5 64.1-71.9 112-140.4 112c-79.5 0-144-64.5-144-144S96.5 64 176 64c68.5 0 125.9 47.9 140.4 112h71.8c8.8-9.8 21.6-16 35.8-16h104c26.5 0 48 21.5 48 48s-21.5 48-48 48H424c-14.2 0-27-6.2-35.8-16zM176 144c35.3 0 64 28.7 64 64s-28.7 64-64 64s-64-28.7-64-64s28.7-64 64-64m256 160c13.3 0 24 10.7 24 24v8h96c13.3 0 24 10.7 24 24s-10.7 24-24 24H312c-13.3 0-24-10.7-24-24s10.7-24 24-24h96v-8c0-13.3 10.7-24 24-24M320 528V416h224v112c0 26.5-21.5 48-48 48H368c-26.5 0-48-21.5-48-48M80 384h128c26.5 0 48 21.5 48 48s-21.5 48-48 48h-16c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32v-80c0-8.8 7.2-16 16-16m128 64c8.8 0 16-7.2 16-16s-7.2-16-16-16h-16v32zM56 528h176c13.3 0 24 10.7 24 24s-10.7 24-24 24H56c-13.3 0-24-10.7-24-24s10.7-24 24-24"
+                />
+              </svg>
+              <p>Kitchen starter kit</p>
             </div>
-
-            <!-- Step 5 -->
-            <div class="step-panel" data-step="4">
-              <h2>Review & Submit</h2>
-              <p>Please review and submit your information.</p>
-
-              <div class="review-box" id="reviewBox">
-                <!-- Filled by JS -->
-              </div>
+            <div class="icon-container">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="56"
+                height="56"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  d="M11.436 11.019h1.4v-.7h-1.123l-.938-3.94a.35.35 0 0 0-.341-.27H8.93a.35.35 0 0 0-.341.27l-.939 3.94H6.524v.7zM9.207 6.808h.949l.836 3.509H8.371Zm1.527 8.071H8.629a.35.35 0 0 0-.351.35v1.755a.35.35 0 0 0 .351.351h2.105a.35.35 0 0 0 .351-.351v-1.755a.35.35 0 0 0-.351-.35m-.35 1.754H8.98V15.58h1.4zm-4.211-1.754h.702v1.754h-.702zm11.228-2.457h.702v1.754h-.702zm0-3.157h.702v1.754h-.702zm4.211-2.457H16.7a.35.35 0 0 0-.35.351v6.667H2.313a.35.35 0 0 0-.35.351v4.21a.35.35 0 0 0 .35.351h19.3a.35.35 0 0 0 .351-.351V7.159a.35.35 0 0 0-.352-.351m-5.263 9.123h-4.211v-1.4h4.211zm-13.685-1.4h4.562v3.509H2.664Zm5.263 0h3.509v1.4h-.012v.7h.012v1.4H7.927Zm4.211 2.1h4.211v1.4h-4.211zm9.123 1.4H17.05v-5.959h4.211zM17.05 11.37V7.51h4.211v3.86z"
+                />
+              </svg>
+              <p>Stove & Fridge</p>
+            </div>
+            <div class="icon-container">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="56"
+                height="56"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  d="M12 21q-1.05 0-1.775-.725T9.5 18.5t.725-1.775T12 16t1.775.725t.725 1.775t-.725 1.775T12 21m-5.65-5.65l-2.1-2.15q1.475-1.475 3.463-2.337T12 10t4.288.875t3.462 2.375l-2.1 2.1q-1.1-1.1-2.55-1.725T12 13t-3.1.625t-2.55 1.725M2.1 11.1L0 9q2.3-2.35 5.375-3.675T12 4t6.625 1.325T24 9l-2.1 2.1q-1.925-1.925-4.462-3.012T12 7T6.563 8.088T2.1 11.1"
+                />
+              </svg>
+              <p>Wifi</p>
+            </div>
+            <div class="icon-container">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="56"
+                height="56"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  d="M4.616 18q-.691 0-1.153-.462T3 16.384V5.616q0-.691.463-1.153T4.615 4h14.77q.69 0 1.152.463T21 5.616v10.769q0 .69-.463 1.153T19.385 18H15v1.192q0 .349-.23.578t-.578.23H9.808q-.348 0-.578-.23T9 19.192V18zm0-1h14.769q.23 0 .423-.192t.192-.424V5.616q0-.231-.192-.424T19.385 5H4.615q-.23 0-.423.192T4 5.616v10.769q0 .23.192.423t.423.192M4 17V5z"
+                />
+              </svg>
+              <p>50" TV</p>
+            </div>
+            <div class="icon-container">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="56"
+                height="56"
+                viewBox="0 0 32 32"
+              >
+                <path
+                  fill="currentColor"
+                  d="M21 1a2 2 0 0 0-2 2v9H3.5A2.5 2.5 0 0 0 1 14.5v2a1.5 1.5 0 0 0 1.414 1.498a11 11 0 0 0 3.396 5.327c.549.474 1.145.896 1.782 1.256L6.097 27.57c-.093.186-.227.453-.328.733c-.1.277-.21.678-.158 1.11c.06.5.332.959.832 1.25c.44.254.982.337 1.557.337h14c.825 0 1.567-.402 2.082-.918c.515-.515.918-1.257.918-2.082v-8c0-.268.155-.627.445-1.024A4 4 0 0 0 29 15V3a2 2 0 0 0-2-2zM9.416 25.403A11 11 0 0 0 13 26c4.22 0 8.114-2.081 10-5.582V28c0 .175-.098.433-.332.668S22.175 29 22 29H8q-.218-.001-.349-.02c.058-.159.142-.33.243-.533zM20.5 17c.334.445.814.775 1.368.92C20.811 21.587 17.223 24 13 24c-2.29 0-4.38-.855-5.968-2.263A9 9 0 0 1 4.222 17zm-.45-1H3v-1.5a.5.5 0 0 1 .5-.5H20v1.5q0 .257.05.5M27 15a2 2 0 0 1-2 2h-2.5a1.5 1.5 0 0 1-1.5-1.5V3h6z"
+                />
+              </svg>
+              <p>Private bathroom</p>
+            </div>
+            <div class="icon-container">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="56"
+                height="56"
+                viewBox="0 0 15 15"
+              >
+                <path
+                  fill="currentColor"
+                  d="M6.5 1c1.5 0 2.5.5 3 1c0 .5-4 5.5-4.5 5.5s-.88-.39-1-1C3.24 8.12 2 12 1.5 14c0 .5-1.5.5-1.5 0S1.47 5.37 3.5 3c.97-1.13 2-2 3-2m7.14 9.14c.2.19.37.33.54.52c.18.18-.32.69-.51.54c-.2-.15-.28-.24-.55-.52c-.26-.27.32-.73.52-.54m-1.63-1.55c-.25-.26-.73.35-.51.54c.21.19.33.31.54.52s.74-.34.52-.55c-.23-.2-.29-.26-.55-.51m-1.62-1.56c-.18-.17-.68.39-.52.55c.26.25.36.34.54.51s.75-.32.52-.54c-.23-.21-.37-.35-.54-.52M8.76 5.48c-.24-.23-.79.29-.52.54c.27.26.35.36.54.52s.69-.38.52-.54s-.33-.32-.54-.52m2.77 7.04c-.24-.35-.76.25-.58.47s.3.37.47.58s.78-.23.58-.47c-.19-.25-.2-.26-.47-.58m-1.41-1.75c-.18-.22-.81.17-.58.47c.22.3.24.29.47.58c.22.29.74-.27.58-.47s-.31-.39-.47-.58M8.71 9.02c-.25-.31-.8.2-.59.47c.22.26.3.39.47.58c.18.19.82-.16.59-.47c-.17-.23-.24-.3-.47-.58M7.29 7.26c-.35-.31-.85.15-.58.48s.29.37.47.58s.79-.23.58-.47c-.2-.25-.34-.43-.47-.59m6.58-.93c-.29-.19-.6.48-.44.61s.38.28.61.44c.22.16.6-.47.44-.61c-.17-.14-.26-.2-.61-.44m-1.83-1.32c-.23-.15-.66.47-.44.61c.24.19.38.27.61.44s.63-.48.44-.61a8 8 0 0 0-.61-.44M10.22 3.7c-.24-.18-.66.44-.44.6c.22.17.41.31.61.44c.2.14.66-.43.44-.6c-.19-.16-.35-.25-.61-.44"
+                />
+              </svg>
+              <p>Shower</p>
+            </div>
+            <div class="icon-container">
+              <img src="" alt="" />
+              <p>....</p>
             </div>
           </div>
-
-          <!-- Buttons -->
-          <div class="nav-buttons">
-            <button type="button" id="prevBtn">Back</button>
-            <button type="button" id="nextBtn">Next</button>
-            <button type="submit" id="submitBtn">Submit</button>
-          </div>
-        </form>
+        </div>
       </div>
-    </section>
+
+      <div class="testimonials">
+        <h3>Guest Reviews for Björkstugan</h3>
+        <div class="testimonial-slideshow">
+          <div class="testimonial-slide">
+            <div class="testimonial-container">
+              <div class="testimonial-card">
+                <svg
+                  id="left-quote-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="M9.213 12.75c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 9 5.75H5A1.75 1.75 0 0 0 3.25 7.5V11c0 .966.784 1.75 1.75 1.75zm10 0c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 19 5.75h-4a1.75 1.75 0 0 0-1.75 1.75V11c0 .966.784 1.75 1.75 1.75z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span
+                  >The location is truly unbeatable. We woke up to an idyllic
+                  view every morning, and the cabin itself was perfectly cozy
+                  and spotless. It was the peaceful retreat we needed, offering
+                  a wonderful blend of natural beauty and home comforts. We
+                  definitely recommend this hidden gem!</span
+                >
+                <svg
+                  id="right-quote-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="M9.213 12.75c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 9 5.75H5A1.75 1.75 0 0 0 3.25 7.5V11c0 .966.784 1.75 1.75 1.75zm10 0c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 19 5.75h-4a1.75 1.75 0 0 0-1.75 1.75V11c0 .966.784 1.75 1.75 1.75z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <div class="testimonial-user">
+                  <p>Liam and Sarah J.</p>
+                  <p>(Stayed in Lillstugan, May 2025)</p>
+                </div>
+              </div>
+              <div class="testimonial-card">
+                <svg
+                  id="left-quote-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="M9.213 12.75c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 9 5.75H5A1.75 1.75 0 0 0 3.25 7.5V11c0 .966.784 1.75 1.75 1.75zm10 0c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 19 5.75h-4a1.75 1.75 0 0 0-1.75 1.75V11c0 .966.784 1.75 1.75 1.75z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span
+                  >I travel frequently for work, and this was a breath of fresh
+                  air. The hosts were incredibly attentive, ensuring I had
+                  everything I needed without being intrusive. The quality of
+                  the amenities, from the fresh linens to the quiet workspace,
+                  was exceptional. It felt less like a rental and more like
+                  visiting old friends</span
+                >
+                <svg
+                  id="right-quote-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="M9.213 12.75c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 9 5.75H5A1.75 1.75 0 0 0 3.25 7.5V11c0 .966.784 1.75 1.75 1.75zm10 0c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 19 5.75h-4a1.75 1.75 0 0 0-1.75 1.75V11c0 .966.784 1.75 1.75 1.75z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <div class="testimonial-user">
+                  <p>David K.</p>
+                  <p>(Stayed in Björkstugan, October 2025)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="testimonial-container">
+              <div class="testimonial-card">
+                <svg
+                  id="left-quote-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="M9.213 12.75c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 9 5.75H5A1.75 1.75 0 0 0 3.25 7.5V11c0 .966.784 1.75 1.75 1.75zm10 0c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 19 5.75h-4a1.75 1.75 0 0 0-1.75 1.75V11c0 .966.784 1.75 1.75 1.75z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span
+                  >A fantastic find! The kids loved exploring the grounds, and
+                  the Storstugan cabin provided plenty of space for our family
+                  of four. The home-made breakfast was a highlight—so fresh and
+                  delicious every day. Considering the high quality of the
+                  accommodations and the personalized service, the value for
+                  money is outstanding. We will be back next summer!</span
+                >
+                <svg
+                  id="right-quote-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="M9.213 12.75c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 9 5.75H5A1.75 1.75 0 0 0 3.25 7.5V11c0 .966.784 1.75 1.75 1.75zm10 0c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 19 5.75h-4a1.75 1.75 0 0 0-1.75 1.75V11c0 .966.784 1.75 1.75 1.75z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <div class="testimonial-user">
+                  <p>The Håkansson family</p>
+                  <p>(Stayed in Storstugan, July 2025)</p>
+                </div>
+              </div>
+              <div class="testimonial-card">
+                <svg
+                  id="left-quote-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="M9.213 12.75c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 9 5.75H5A1.75 1.75 0 0 0 3.25 7.5V11c0 .966.784 1.75 1.75 1.75zm10 0c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 19 5.75h-4a1.75 1.75 0 0 0-1.75 1.75V11c0 .966.784 1.75 1.75 1.75z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span
+                  >A fantastic find! The kids loved exploring the grounds, and
+                  the Storstugan cabin provided plenty of space for our family
+                  of four. The home-made breakfast was a highlight—so fresh and
+                  delicious every day. Considering the high quality of the
+                  accommodations and the personalized service, the value for
+                  money is outstanding. We will be back next summer!</span
+                >
+                <svg
+                  id="right-quote-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="M9.213 12.75c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 9 5.75H5A1.75 1.75 0 0 0 3.25 7.5V11c0 .966.784 1.75 1.75 1.75zm10 0c-.084.774-.308 1.392-.698 1.94c-.523.731-1.4 1.414-2.85 2.14a.75.75 0 1 0 .67 1.34c1.55-.774 2.673-1.591 3.4-2.61c.741-1.036 1.015-2.203 1.015-3.56V7.5A1.75 1.75 0 0 0 19 5.75h-4a1.75 1.75 0 0 0-1.75 1.75V11c0 .966.784 1.75 1.75 1.75z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <div class="testimonial-user">
+                  <p>The Håkansson family</p>
+                  <p>(Stayed in Storstugan, July 2025)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="page-dots">
+            <span
+              class="testimonial-dot"
+              id="slide1"
+              onClick="currentSlide(1)"
+            ></span>
+            <span
+              class="testimonial-dot"
+              id="slide2"
+              onClick="currentSlide(2)"
+            ></span>
+          </div>
+        </div>
+      </div>
+
+      <section id="booking-section">
+        <div class="form-container">
+          <!-- Timeline Navigation -->
+          <div class="timeline" id="stepNav">
+            <div class="timeline-step" data-step="0">
+              <div class="dot"></div>
+              <span>Personal</span>
+            </div>
+            <div class="line"></div>
+            <div class="timeline-step" data-step="1">
+              <div class="dot"></div>
+              <span>Room</span>
+            </div>
+            <div class="line"></div>
+            <div class="timeline-step" data-step="2">
+              <div class="dot"></div>
+              <span>Date</span>
+            </div>
+            <div class="line"></div>
+            <div class="timeline-step" data-step="3">
+              <div class="dot"></div>
+              <span>Other</span>
+            </div>
+            <div class="line"></div>
+            <div class="timeline-step" data-step="4">
+              <div class="dot"></div>
+              <span>Submit</span>
+            </div>
+          </div>
+
+          <form id="multiStepForm" name="contact" netlify>
+            <div class="steps-wrapper">
+              <!-- Step 1 -->
+              <div class="step-panel active" data-step="0">
+                <h2>Your information</h2>
+
+                <div class="field">
+                  <label>Full Name</label>
+                  <input type="text" id="name" />
+                  <p class="error-text" id="nameError"></p>
+                </div>
+
+                <div class="field">
+                  <label>Email</label>
+                  <input type="email" id="email" />
+                  <p class="error-text" id="emailError"></p>
+                </div>
+
+                <div class="field">
+                  <label>Address</label>
+                  <input type="text" id="address" />
+                  <p class="error-text" id="addressError"></p>
+                </div>
+
+                <div class="field">
+                  <label>Phone</label>
+                  <input type="tel" id="phone" />
+                  <p class="error-text" id="phoneError"></p>
+                </div>
+              </div>
+
+              <!-- Step 2 -->
+              <div class="step-panel" data-step="1">
+                <h2>Select Room</h2>
+
+                <div class="room-grid">
+                  <label class="room-card">
+                    <input type="radio" name="room" value="lillstugan" />
+                    <span>Lillstugan</span>
+                  </label>
+                  <label class="room-card">
+                    <input type="radio" name="room" value="storstugan" />
+                    <span>Storstugan</span>
+                  </label>
+                  <label class="room-card">
+                    <input
+                      type="radio"
+                      name="room"
+                      value="björkstugan"
+                      id="björkstugan"
+                    />
+                    <span>Björkstugan</span>
+                  </label>
+                  <label class="room-card">
+                    <input type="radio" name="room" value="rorpet" />
+                    <span>Torpet</span>
+                  </label>
+                  <label class="room-card">
+                    <input type="radio" name="room" value="ladan" />
+                    <span>Ladan</span>
+                  </label>
+
+                  <p class="error-text" id="roomError"></p>
+                </div>
+              </div>
+
+              <!-- Step 3 -->
+              <div class="step-panel" data-step="2">
+                <h2>Date</h2>
+
+                <div class="field">
+                  <label>Arrival Date</label>
+                  <input type="date" id="arrival-date" />
+                  <p class="error-text" id="arrival-date-Error"></p>
+                </div>
+
+                <div class="field">
+                  <label>Departure date</label>
+                  <input type="date" id="departure-date" />
+                  <p class="error-text" id="departure-date-Error"></p>
+                </div>
+              </div>
+
+              <!-- Step 4 -->
+              <div class="step-panel" data-step="3">
+                <h2>Additional Info</h2>
+
+                <div class="field">
+                  <label>Message for sjöstugan</label>
+                  <textarea id="notes" rows="4"></textarea>
+                </div>
+              </div>
+
+              <!-- Step 5 -->
+              <div class="step-panel" data-step="4">
+                <h2>Review & Submit</h2>
+                <p>Please review and submit your information.</p>
+
+                <div class="review-box" id="reviewBox">
+                  <!-- Filled by JS -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="nav-buttons">
+              <button type="button" id="prevBtn">Back</button>
+              <button type="button" id="nextBtn">Next</button>
+              <button type="submit" id="submitBtn">Submit</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
     <footer id="footer-container">
       <div id="footer-overlay"></div>
       <div class="footer-content">
         <img id="footer-logo" src="b&b-images/graphics/SVG/Asset 1.svg" />
-        <div class="contact-row">
-          <h4>Contact us</h4>
-          <ul>
-            <li>sjöstugan@gmail.com</li>
-            <li>Address, adress</li>
-            <li>+46 xxxxxxx</li>
-          </ul>
-        </div>
-        <div class="socials-row">
-          <h4>Socials</h4>
-          <div class="social-icons">
-            <div class="social-icon-container">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="currentColor"
-                  d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"
-                />
-              </svg>
-            </div>
-            <div class="social-icon-container">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="currentColor"
-                  d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95"
-                />
-              </svg>
+        <div class="footer-information">
+          <div class="contact-row">
+            <h4>Contact us</h4>
+            <ul>
+              <li>sjöstugan@gmail.com</li>
+              <li>Address, adress</li>
+              <li>+46 xxxxxxx</li>
+            </ul>
+          </div>
+          <div class="socials-row">
+            <h4>Socials</h4>
+            <div class="social-icons">
+              <div class="social-icon-container">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"
+                  />
+                </svg>
+              </div>
+              <div class="social-icon-container">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
         </div>

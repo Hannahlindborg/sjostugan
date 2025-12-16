@@ -1,69 +1,74 @@
-//Testimonials
-//Testimonials slideshow
+//Swup
 
-document.addEventListener("DOMContentLoaded", () => {
-  let slideIndex = 1;
-  showSlides(slideIndex);
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
-  window.plusSlides = function (n) {
-    showSlides((slideIndex += n));
-  };
-  window.currentSlide = function (n) {
-    showSlides((slideIndex = n));
-  };
+import Swup from "https://unpkg.com/swup@4?module";
+import { initHomePage } from "./homepage.js";
+import { initCabinPage } from "./cabin.js";
+import { initContactPage } from "./contact.js";
+import { initCabinIndexPage } from "./cabinindex.js";
+import { initAboutPage } from "./about.js";
+import { initBookingPage } from "./booking.js";
 
-  function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("testimonial-slide");
-    let dots = document.getElementsByClassName("testimonial-dot");
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText, ScrollToPlugin);
 
-    if (slides.length === 0) {
-      return;
-    }
-    if (n > slides.length) {
-      slideIndex = 1;
-    }
-    if (n < 1) {
-      slideIndex = slides.length;
-    }
-    for (let i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    for (let i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-
-    slides[slideIndex - 1].style.display = "flex";
-    dots[slideIndex - 1].className += " active";
-  }
-
-  gsap.registerPlugin(ScrollTrigger);
-
-  const testimonialsContainer = document.querySelector(".testimonials");
-
-  gsap.set(testimonialsContainer, {
-    opacity: 0,
-    y: 50,
-  });
-
-  gsap.to(testimonialsContainer, {
-    opacity: 1,
-    y: 0,
-    duration: 2,
-    ease: "power2.out",
-    scrollTrigger: {
-      trigger: testimonialsContainer,
-      start: "top 80%",
-      once: true,
-    },
-  });
+const swup = new Swup({
+  containers: ["#swup"],
+  plugins: [new SwupHeadPlugin()],
 });
 
+let ctx;
+
+function onPageLoad() {
+  if (ctx) ctx.revert();
+
+  ctx = gsap.context(() => {
+    runPageScript();
+    initFooterAnimation();
+  });
+
+  ScrollTrigger.refresh();
+}
+
+onPageLoad();
+swup.hooks.on("content:replace", onPageLoad);
+
+function runPageScript() {
+  const page = document.body.dataset.page;
+
+  switch (page) {
+    case "home":
+      initHomePage();
+      break;
+    case "cabin":
+      initCabinPage();
+      break;
+    case "contact":
+      initContactPage();
+      break;
+    case "cabinindex":
+      initCabinIndexPage();
+      break;
+    case "about":
+      initAboutPage();
+      break;
+    case "booking":
+      initBookingPage();
+      break;
+  }
+}
+
+//runPageScript();
+//swup.hooks.on("content:replace", runPageScript);
+
 //Footer
-document.addEventListener("DOMContentLoaded", () => {
+
+function initFooterAnimation() {
   gsap.registerPlugin(ScrollTrigger);
 
   const footerContainer = document.querySelector("#footer-container");
+  if (!footerContainer) return; // safety check
+
   console.log("Footer element found:", footerContainer);
 
   gsap.set(footerContainer, {
@@ -83,4 +88,4 @@ document.addEventListener("DOMContentLoaded", () => {
       markers: true,
     },
   });
-});
+}
