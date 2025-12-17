@@ -10,8 +10,6 @@ import { initCabinIndexPage } from "./cabinindex.js";
 import { initAboutPage } from "./about.js";
 import { initBookingPage } from "./booking.js";
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText, ScrollToPlugin);
-
 const swup = new Swup({
   containers: ["#swup"],
   plugins: [new SwupHeadPlugin()],
@@ -19,10 +17,10 @@ const swup = new Swup({
 
 let ctx;
 
-function onPageLoad() {
+async function onPageLoad() {
   if (ctx) ctx.revert();
 
-  ctx = gsap.context(() => {
+  ctx = gsap.context(async () => {
     runPageScript();
     initFooterAnimation();
   });
@@ -35,57 +33,58 @@ swup.hooks.on("content:replace", onPageLoad);
 
 function runPageScript() {
   const page = document.body.dataset.page;
+  console.log(
+    "check",
+    window.location.pathname,
+    window.location.pathname == "/index.html"
+  );
 
-  switch (page) {
-    case "home":
-      initHomePage();
-      break;
-    case "cabin":
-      initCabinPage();
-      break;
-    case "contact":
-      initContactPage();
-      break;
-    case "cabinindex":
-      initCabinIndexPage();
-      break;
-    case "about":
-      initAboutPage();
-      break;
-    case "booking":
-      initBookingPage();
-      break;
+  if (window.location.pathname == "/index.html") {
+    initHomePage();
+  } else if (window.location.pathname == "/cabins.html") {
+    initCabinIndexPage();
+  } else if (
+    window.location.pathname == "/lillstugan.html" ||
+    "/storstugan.html" ||
+    "/björkstugan.html" ||
+    "/ladan.html" ||
+    "/torpet.html"
+  ) {
+    initCabinPage();
+  } else if (window.location.pathname == "/contact.html") {
+    initContactPage();
+  } else if (window.location.pathname == "/booking.html") {
+    initBookingPage();
+  } else if (window.location.pathname == "/about.html") {
+    initAboutPage();
   }
 }
-
-//runPageScript();
-//swup.hooks.on("content:replace", runPageScript);
 
 //Footer
 
 function initFooterAnimation() {
-  gsap.registerPlugin(ScrollTrigger);
-
-  const footerContainer = document.querySelector("#footer-container");
-  if (!footerContainer) return; // safety check
+  const footerContainer = document.querySelector(".footer-content");
+  if (!footerContainer) return;
 
   console.log("Footer element found:", footerContainer);
 
-  gsap.set(footerContainer, {
-    opacity: 0,
-    y: 50,
-  });
-
-  gsap.to(footerContainer, {
-    opacity: 1,
-    y: 0,
-    duration: 2,
-    ease: "power2.out",
-    scrollTrigger: {
-      trigger: footerContainer,
-      start: "top 80%",
-      once: true,
-      markers: true,
+  gsap.fromTo(
+    footerContainer,
+    {
+      autoAlpha: 0,
+      y: 50,
     },
-  });
+    {
+      autoAlpha: 1,
+      y: 0,
+      duration: 2,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: footerContainer,
+        start: "top 80%",
+        once: true,
+        markers: true,
+      },
+    }
+  );
 }

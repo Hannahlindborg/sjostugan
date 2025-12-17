@@ -1,9 +1,11 @@
 /*Global styles*/
 body {
-  background-color: #ffeee3;
+  background-color: #fff3eb;
   background-blend-mode: overlay;
-  margin: 0;
   font-size: 16px;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 /*
 .lato-thin {
@@ -83,9 +85,11 @@ html.is-animating .transition-main {
   opacity: 0;
 }
 
+/*Font sizes web*/
+
 h1 {
   color: #cc6e58;
-  font-size: 28vh;
+  font-size: 10rem;
   font-family: "Alex Brush", cursive;
   font-weight: 100;
   font-style: normal;
@@ -95,24 +99,26 @@ h2 {
   font-family: "Alex Brush", cursive;
   font-weight: 100;
   font-style: normal;
-  font-size: 22vh;
+  font-size: 10rem;
 }
 
 h3 {
   font-family: "Alex Brush", cursive;
   font-weight: 100;
   font-style: normal;
-  font-size: 10vh;
+  font-size: 5rem;
 }
 
 h4 {
   font-family: "Alex Brush", cursive;
   font-weight: 100;
   font-style: normal;
-  font-size: 5vh;
+  font-size: 2.25rem;
 }
 
-p {
+p,
+li,
+span {
   font-family: "Lora", serif;
   font-optical-sizing: auto;
   font-weight: weight;
@@ -135,13 +141,24 @@ p {
   transition: background-color 0.5s ease-in-out;
 }
 
+.top-menu {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0)
+  );
+}
+
 .top-menu.top-menu-with-background {
   background-image: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.5),
     rgba(0, 0, 0, 0)
   );
-  /*backdrop-filter: blur(10px);*/
+}
+
+.top-menu svg {
+  display: none;
 }
 
 .top-menu ul {
@@ -165,6 +182,18 @@ p {
 
 .top-menu a:hover {
   transform: scale(1.2);
+}
+
+@media screen and (max-width: 700px) {
+  .top-menu svg {
+    display: block;
+  }
+  .top-menu li {
+    display: none;
+  }
+  .top-menu ul {
+    justify-content: flex-start;
+  }
 }
 
 /*Hero-section*/
@@ -230,6 +259,7 @@ p {
 .hero-logo-title {
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
   width: 400px;
   height: auto;
   text-shadow: 2px 2px 4px #000000;
@@ -238,7 +268,7 @@ p {
 #hero-title {
   color: white;
   opacity: 60%;
-  font-size: 10vh;
+  font-size: 6rem;
   margin: 0;
 }
 
@@ -281,26 +311,25 @@ p {
 .text-column span {
   width: 100%;
   text-align: center;
-  font-size: 3vh;
   font-weight: 300;
   margin-bottom: 1vh;
 }
 
 .introduction-section span {
-  color: #f2e2d8;
+  color: #fff3eb;
   text-shadow: 2px 2px 2px #00000050;
   font-family: "Lora", serif;
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;
-  font-size: 2.5vh;
+  font-size: 1.5rem;
 }
 
 #introduction-cursive {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 6vh;
+  font-size: 3rem;
   margin-bottom: 5vh;
 }
 
@@ -312,12 +341,11 @@ p {
 
 #introduction-kurbits {
   position: fixed;
-  top: 100px;
-  right: 200px;
+  top: 10%;
+  right: 10%;
   opacity: 0.3;
-
-  height: 700px;
-  width: 300px;
+  height: 50vw;
+  width: auto;
   z-index: -2;
 }
 
@@ -333,6 +361,15 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+@media screen and (max-width: 700px) {
+  #introduction-kurbits {
+    display: none;
+  }
+  .text-column span {
+    text-align: left;
+  }
 }
 
 /*Cabin section*/
@@ -358,18 +395,22 @@ p {
   justify-content: flex-end;
 }
 
-.cabin-page p {
-  grid-column: 1 / span 3;
+.cabin-text {
+  grid-column: 1 / span 4;
   grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.cabin-page p {
   color: #67372b;
   width: 478px;
 }
 
-.cabin-page a {
+.cabin-text a {
   color: #cc6e58;
   font-weight: bold;
-  grid-column: 1 / span 4;
-  grid-row: 2;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
@@ -384,12 +425,14 @@ p {
 .nav-link {
   width: fit-content;
   display: block;
-  font-weight: bold;
-  font-size: 1.5vw;
   text-decoration: none;
   padding-bottom: 1vh;
   border-bottom: 2px solid #cc6e58;
   color: #cc6e58;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.25rem;
 
   transition: border-color 0.3s ease, transform 0.3s ease;
 }
@@ -423,6 +466,25 @@ p {
 .cabin-page img:hover {
   transform: scale(1.02);
   cursor: grab;
+}
+
+@media screen and (max-width: 1050px) {
+  .cabin-page {
+    grid-template-rows: repeat(4, auto);
+  }
+
+  #cabin-images-1 {
+    grid-column: 6 / span 6;
+  }
+
+  #cabin-images-2 {
+    grid-row: 3;
+    grid-column: 1 / span 6;
+  }
+
+  .cabin-text {
+    grid-row: 4;
+  }
 }
 
 /*Breakfasts section*/
@@ -472,7 +534,7 @@ p {
 }
 
 .breakfast-info span {
-  font-size: 3vh;
+  font-size: 1.5rem;
   font-weight: 300;
   text-shadow: 2px 2px 4px #00000050;
 }
@@ -481,8 +543,15 @@ p {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 6vh;
+  font-size: 3rem;
   margin-bottom: 5vh;
+}
+
+@media screen and (max-width: 700px) {
+  .breakfast-section {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 /*Explore section*/
@@ -529,33 +598,42 @@ p {
 .explore-lake {
   grid-column: 1 / span 3;
   grid-row: 2;
+  aspect-ratio: 2/3;
+  width: 100%;
+  height: auto;
 }
 
 .explore-lake img {
   width: 100%;
-  height: 396px;
+  height: 100%;
   object-fit: cover;
 }
 
 .explore-hike {
   grid-column: 4 / span 3;
   grid-row: 2;
+  aspect-ratio: 2/3;
+  width: 100%;
+  height: auto;
 }
 
 .explore-hike img {
   width: 100%;
-  height: 437px;
+  height: 100%;
   object-fit: cover;
 }
 
 .explore-midsommar {
   grid-column: 7 / span 3;
   grid-row: 2;
+  aspect-ratio: 4/3;
+  width: 100%;
+  height: auto;
 }
 
 .explore-midsommar img {
   width: 100%;
-  height: 254px;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -563,12 +641,47 @@ p {
   grid-column: 10 / span 3;
   grid-row: 1 / span 2;
   align-self: start;
+  aspect-ratio: 2/3;
+  width: 100%;
+  height: auto;
 }
 
 .explore-rättvik img {
   width: 100%;
-  height: 414px;
+  height: 100%;
   object-fit: cover;
+}
+
+@media screen and (max-width: 1050px) {
+  .explore {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+  }
+
+  .explore h2 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .explore-lake {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .explore-hike {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .explore-midsommar {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .explore-rättvik {
+    grid-column: 2;
+    grid-row: 3;
+  }
 }
 
 /*Review section slideshow
@@ -577,8 +690,7 @@ https://www.w3schools.com/howto/howto_js_slideshow.asp*/
 .testimonials {
   position: relative;
   padding: 20px 20px;
-  background-color: #ffeee3;
-  border: 8px solid #4f728a;
+  background-color: #fff3eb;
   border-radius: 16px;
   margin-left: 3vw;
   margin-right: 3vw;
@@ -586,22 +698,9 @@ https://www.w3schools.com/howto/howto_js_slideshow.asp*/
   margin-bottom: 16vh;
 }
 
-.testimonials::before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 650px;
-  height: 50px;
-  top: -20px;
-  border: 50px solid #ffeee3;
-  z-index: -1;
-}
-
 .testimonials h3 {
   display: block;
   color: #4f728a;
-  margin-top: -70px;
-  margin-left: 25px;
 }
 
 .testimonial-card {
@@ -630,12 +729,13 @@ footer {
   height: 40vh;
   position: relative;
   z-index: 10;
+  margin-top: auto;
 }
 
 #footer-overlay {
   background-color: rgb(3, 1, 1);
   position: absolute;
-  opacity: 50%;
+  opacity: 0.5;
   top: auto;
   z-index: 0;
   width: 100%;
@@ -652,10 +752,9 @@ footer {
   grid-template-columns: repeat(12, 1fr);
   width: 100%;
   height: 100%;
-  color: #f2e2d8;
+  color: #f5f5f5;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
   z-index: 1;
 }
 
@@ -670,12 +769,11 @@ footer h4 {
 
 #footer-logo {
   grid-column: 1 / span 3;
-  width: 80%;
-  height: 80%;
   object-fit: cover;
   align-self: center;
   justify-self: center;
   opacity: 60%;
+  padding: 2vw;
 }
 
 .footer-information {
@@ -689,6 +787,7 @@ footer h4 {
 .contact-row {
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: flex-start;
 }
@@ -706,6 +805,7 @@ footer h4 {
 
 .socials-row {
   display: flex;
+  flex-wrap: nowrap;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -728,6 +828,12 @@ footer h4 {
   object-fit: cover;
 }
 
+@media screen and (max-width: 700px) {
+  footer h4 {
+    font-size: 2.25rem;
+  }
+}
+
 /*Form*/
 /*Booking form*/
 .booking {
@@ -739,7 +845,7 @@ footer h4 {
 .form-container {
   max-width: 520px;
   margin: auto;
-  background: #ffeee3;
+  background: #fff3eb;
   border: 8px solid #67372b;
   border-radius: 16px;
   padding: 24px;
@@ -847,7 +953,7 @@ textarea {
   border-radius: 10px;
   border: 1px solid #67372b;
   font-size: 14px;
-  background-color: #ffeee3;
+  background-color: #fff3eb;
 }
 
 input:focus,
@@ -900,10 +1006,10 @@ textarea:focus {
 }
 
 button {
-  border: 1px solid #67372b;
+  border: none;
   background: #67372b;
   padding: 10px 16px;
-  border-radius: 10px;
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.2s ease;
   font-size: 14px;
@@ -911,7 +1017,7 @@ button {
 }
 
 button:hover {
-  background: #f4f4f5;
+  background: #cc6e58;
 }
 
 #submitBtn {
@@ -921,7 +1027,7 @@ button:hover {
 }
 
 #submitBtn:hover {
-  background: #000;
+  background: #67372b;
 }
 
 /* Validation */
@@ -962,4 +1068,82 @@ button:hover {
 .review-value {
   font-weight: 500;
   text-align: right;
+}
+
+/*Font-sizes */
+@media screen and (max-width: 1050px) {
+  h1 {
+    font-size: 6rem;
+  }
+
+  h2 {
+    font-size: 6rem;
+  }
+
+  h3 {
+    font-size: 5rem;
+  }
+
+  h4 {
+    font-size: 3rem;
+  }
+
+  p,
+  li {
+    font-size: 1rem;
+  }
+
+  .nav-link {
+    font-size: 1.1rem;
+  }
+
+  #introduction-cursive {
+    font-size: 2rem;
+  }
+
+  #explore-cursive {
+    font-size: 2rem;
+  }
+
+  #hero-title {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+
+  p,
+  li {
+    font-size: 0.875rem;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+  }
+
+  #introduction-title {
+    font-size: 1.5rem;
+  }
+
+  #explore-title {
+    font-size: 1.5rem;
+  }
+  #hero-title {
+    font-size: 2rem;
+  }
 }

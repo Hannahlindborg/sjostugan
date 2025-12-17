@@ -1,16 +1,19 @@
 export function initCabinPage() {
   document.fonts.ready.then(() => {
-    initSplitText();
-    initImageGallery();
-    initScrollTo();
-    initAmenitiesTrigger();
-    initBookingForm();
-    prefillRoom();
+    return gsap.context(() => {
+      initSplitText();
+      initImageGallery();
+      initScrollTo();
+      initAmenitiesTrigger();
+      initBookingForm();
+      prefillRoom();
+    });
   });
 }
 
 //Title animation
 function initSplitText() {
+  console.log("check cabin", document.querySelector("#title"));
   const split = SplitText.create("#title", {
     type: "chars",
     charsClass: "char",

@@ -26,8 +26,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollToPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollSmoother.min.js"></script>
     <script src="https://unpkg.com/@swup/head-plugin@2"></script>
+    <script src="https://unpkg.com/blaze-slider@latest/dist/blaze-slider.min.js"></script>
   </head>
-  <body data-page="contact">
+  <body>
     <header>
       <nav class="top-menu">
         <ul>
@@ -40,7 +41,7 @@
       </nav>
     </header>
     <main id="swup" class="transition-main">
-      <h1>Title</h1>
+      <h1 id="contact-title">Get in Touch</h1>
       <div id="introduction-kurbits">
         <img src="b&b-images/graphics/kurbits-blå.png" alt="" />
       </div>
@@ -92,7 +93,7 @@
           </div>
         </div>
         <div class="message-form">
-          <h2>Send us a message</h2>
+          <h3 id="message-form-title">Send us a message</h3>
           <form>
             <div class="message-field">
               <label>Full Name</label>

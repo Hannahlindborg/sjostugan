@@ -2,13 +2,13 @@
 
 export function initCabinIndexPage() {
   document.fonts.ready.then(() => {
-    initCabinCardTrigger();
+    return gsap.context(() => {
+      initCabinCardTrigger();
+    });
   });
 }
 
 function initCabinCardTrigger() {
-  gsap.registerPlugin(ScrollTrigger);
-
   const cabinCards = document.querySelectorAll(".cabin");
   if (!cabinCards) return;
 

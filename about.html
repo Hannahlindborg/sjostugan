@@ -26,7 +26,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollSmoother.min.js"></script>
     <script src="https://unpkg.com/@swup/head-plugin@2"></script>
   </head>
-  <body data-page="about">
+  <body>
     <header>
       <nav class="top-menu">
         <ul>
@@ -39,10 +39,10 @@
       </nav>
     </header>
     <main id="swup" class="transition-main">
-      <h1>Sjöstugan</h1>
       <div class="container">
         <div class="description">
-          <span
+          <h1 id="sjöstugan-title">Sjöstugan</h1>
+          <span id="par1"
             >Nestled on the shores of beautiful Lake Siljan in the heart of
             Dalarna, our bed and breakfast is a family-owned retreat built on
             tradition, hospitality, and a genuine love for this region. What
@@ -51,7 +51,7 @@
             Swedish countryside living.</span
           >
           <br />
-          <span
+          <span id=" par2"
             >We take pride in offering a personal touch — from the homemade
             breakfasts inspired by local flavors to the thoughtfully designed
             cabins and rooms that reflect the character of Dalarna. Whether
@@ -60,57 +60,23 @@
             from the moment you arrive.</span
           >
           <br />
-          <span>
+          <span id="par3">
             For us, this is more than a business. It’s a place where families
             gather, friends reconnect, and lasting memories are made. We look
             forward to welcoming you to our little corner of Siljan.</span
           >
           <a class="nav-link" href="/booking.html">Book Your Stay Now →</a>
         </div>
-        <div class="vertical-scroll">
+        <div class="images-right">
           <div class="column">
-            <div class="img-wrapper left-column">
-              <div class="frame">
-                <img src="/b&b-images/house-behind-trees.jpg" />
-              </div>
-              <div class="frame">
-                <img src="/b&b-images/yard.jpg" />
-              </div>
-              <div class="frame">
-                <img src="/b&b-images/window-inside.jpg" />
-              </div>
-              <div class="frame">
-                <img src="/b&b-images/lake-view.jpg" />
-              </div>
-              <div class="frame">
-                <img src="/b&b-images/lake-view.jpg" />
-              </div>
-              <div class="frame">
-                <img src="/b&b-images/lake-view.jpg" />
-              </div>
-            </div>
+            <img id="img1" src="/b&b-images/window-inside.jpg" />
+
+            <img id="img2" src="/b&b-images/lake-view.jpg" />
           </div>
           <div class="column">
-            <div class="img-wrapper right-column">
-              <div class="frame">
-                <img src="/b&b-images/breakfast-image.jpg" />
-              </div>
-              <div class="frame">
-                <img src="/b&b-images/bed-forest.jpg" />
-              </div>
-              <div class="frame">
-                <img src="/b&b-images/lantern-cabin.jpg" />
-              </div>
-              <div class="frame">
-                <img src="/b&b-images/torpet.jpg" />
-              </div>
-              <div class="frame">
-                <img src="/b&b-images/cabin-diningroom.jpg" />
-              </div>
-              <div class="frame">
-                <img src="/b&b-images/cabin-diningroom.jpg" />
-              </div>
-            </div>
+            <img id="img3" src="/b&b-images/breakfast-image.jpg" />
+
+            <img id="img4" src="/b&b-images/bed-forest.jpg" />
           </div>
         </div>
       </div>
@@ -119,42 +85,44 @@
       <div id="footer-overlay"></div>
       <div class="footer-content">
         <img id="footer-logo" src="b&b-images/graphics/SVG/Asset 1.svg" />
-        <div class="contact-row">
-          <h4>Contact us</h4>
-          <ul>
-            <li>sjöstugan@gmail.com</li>
-            <li>Address, adress</li>
-            <li>+46 xxxxxxx</li>
-          </ul>
-        </div>
-        <div class="socials-row">
-          <h4>Socials</h4>
-          <div class="social-icons">
-            <div class="social-icon-container">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="currentColor"
-                  d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"
-                />
-              </svg>
-            </div>
-            <div class="social-icon-container">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="currentColor"
-                  d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95"
-                />
-              </svg>
+        <div class="footer-information">
+          <div class="contact-row">
+            <h4>Contact us</h4>
+            <ul>
+              <li>sjöstugan@gmail.com</li>
+              <li>Address, adress</li>
+              <li>+46 xxxxxxx</li>
+            </ul>
+          </div>
+          <div class="socials-row">
+            <h4>Socials</h4>
+            <div class="social-icons">
+              <div class="social-icon-container">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"
+                  />
+                </svg>
+              </div>
+              <div class="social-icon-container">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
         </div>

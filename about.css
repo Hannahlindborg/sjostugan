@@ -1,10 +1,5 @@
-.top-menu {
-  background-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0)
-  );
-  /*backdrop-filter: blur(10px);*/
+#sjöstugan-title {
+  margin: 0;
 }
 
 .container {
@@ -13,9 +8,11 @@
   align-items: start;
 }
 
-.vertical-scroll {
+.images-right {
   display: flex;
+  flex-direction: row;
   align-items: flex-start;
+  height: 100vh;
   width: 100%;
 }
 
@@ -26,24 +23,32 @@
   will-change: transform;
 }
 
-.left-column,
-.right-column {
-  will-change: transform;
-}
-
-.frame {
+#img1 {
+  flex: 6;
+  object-fit: cover;
   width: 100%;
 }
 
-.frame img {
+#img2 {
+  flex: 4;
+  object-fit: cover;
   width: 100%;
-  height: auto;
-  display: block;
+}
+
+#img3 {
+  flex: 6;
+  object-fit: cover;
+  width: 100%;
+}
+
+#img4 {
+  flex: 4;
+  object-fit: cover;
+  width: 100%;
 }
 
 .description {
   position: sticky;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -56,4 +61,13 @@
 
 .nav-link {
   margin-top: 1vh;
+}
+
+@media screen and (max-width: 1050px) {
+  .container {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
 }

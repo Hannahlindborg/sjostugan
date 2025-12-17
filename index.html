@@ -18,13 +18,29 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollToPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollSmoother.min.js"></script>
     <script src="https://unpkg.com/@swup/head-plugin@2"></script>
+    <script src="https://unpkg.com/@swup/js-plugin@3"></script>
     <link rel="stylesheet" href="/blaze.css" type="text/css" />
     <script src="https://unpkg.com/blaze-slider@latest/dist/blaze-slider.min.js"></script>
   </head>
-  <body data-page="home">
+  <body>
     <header>
       <nav class="top-menu">
         <ul>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+          >
+            <path
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 8h22M5 16h22M5 24h22"
+            />
+          </svg>
           <li><a href="index.html">Home</a></li>
           <li><a href="cabins.html">Cabins</a></li>
           <li><a href="/contact.html">Contact</a></li>
@@ -74,15 +90,17 @@
       </div>
       <div class="cabin-page">
         <h2 id="cabin-title">Our Cabins</h2>
-        <p>
-          We have 5 fully equipt cabins on our property and In total 30
-          available beds. From our cozy 2 person hut to the Storstuga housing up
-          to 8 people. We have something for everyone- find which cabin is
-          perfect for your getaway.
-        </p>
-        <a class="nav-link" href="cabins.html"
-          >Check Out all of our available Accommodations →
-        </a>
+        <div class="cabin-text">
+          <p>
+            We have 5 fully equipt cabins on our property and In total 30
+            available beds. From our cozy 2 person hut to the Storstuga housing
+            up to 8 people. We have something for everyone- find which cabin is
+            perfect for your getaway.
+          </p>
+          <a class="nav-link" href="cabins.html"
+            >Check out all of our available accommodations →
+          </a>
+        </div>
         <a href="cabins.html" id="cabin-images-1">
           <img src="b&b-images/cabin-bedroom.jpg" alt="" />
         </a>

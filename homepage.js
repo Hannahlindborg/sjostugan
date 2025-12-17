@@ -1,14 +1,13 @@
 export function initHomePage() {
-  document.fonts.ready.then(() => {
-    initMenuScroll();
-    initSplitTextLogo();
-    initIntroductionTrigger();
-    initCabinSection();
-    initBreakfastSection();
-    initExploreSection();
-    initTestimonialSlider();
-    initTestimonialTrigger();
-  });
+  console.log("check");
+  initMenuScroll();
+  initSplitTextLogo();
+  initIntroductionTrigger();
+  initCabinSection();
+  initBreakfastSection();
+  initExploreSection();
+  initTestimonialSlider();
+  initTestimonialTrigger();
 }
 
 // Menu background on scroll
