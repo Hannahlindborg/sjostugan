@@ -2,6 +2,7 @@ export function initContactPage() {
   document.fonts.ready.then(() => {
     initSplitText();
     initGallerySlider();
+    initBookingForm();
   });
 }
 
@@ -46,5 +47,59 @@ function initGallerySlider() {
     "(max-width: 500px)": {
       slidesToShow: 1,
     },
+  });
+}
+
+function initBookingForm() {
+  const bookingForm = document.querySelector(".message-form form");
+  const loader = document.querySelector(".loading");
+
+  if (!bookingForm || !loader) return;
+
+  function clearErrors() {
+    document
+      .querySelectorAll(".error")
+      .forEach((el) => el.classList.remove("error"));
+    document
+      .querySelectorAll(".error-text")
+      .forEach((el) => (el.textContent = ""));
+  }
+
+  function validateStep() {
+    let valid = true;
+    clearErrors();
+    const name = document.getElementById("name");
+    const email = document.getElementById("email");
+    const nameError = document.getElementById("nameError");
+    const emailError = document.getElementById("emailError");
+
+    if (!name.value.trim()) {
+      name.classList.add("error");
+      nameError.textContent = "Full name is required.";
+      valid = false;
+    }
+
+    if (!email.value.includes("@") || !email.value.includes(".")) {
+      email.classList.add("error");
+      emailError.textContent = "Please enter a valid email address.";
+      valid = false;
+    }
+
+    return valid;
+  }
+
+  // Submit
+  bookingForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    if (validateStep()) {
+      loader.classList.add("active");
+
+      setTimeout(() => {
+        loader.classList.remove("active");
+
+        alert("Thank you! Your message has been sent.");
+      }, 2000);
+    }
   });
 }

@@ -234,6 +234,11 @@
   margin-left: 8vw;
 }
 
+#testimonial-title {
+  color: #2f4250;
+  margin-left: 4vw;
+}
+
 @media screen and (max-width: 1050px) {
   .icon-grid {
     grid-template-columns: repeat(4, 1fr);

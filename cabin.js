@@ -5,6 +5,7 @@ export function initCabinPage() {
       initImageGallery();
       initScrollTo();
       initSplitTextBooking();
+      initTestimonialTitle();
       initAmenitiesTrigger();
       initBookingForm();
       prefillRoom();
@@ -67,6 +68,29 @@ function initImageGallery() {
 //Booking title animation
 function initSplitTextBooking() {
   const split = SplitText.create("#booking-title", {
+    type: "chars",
+    charsClass: "char",
+  });
+
+  if (!split) return;
+
+  gsap.from(
+    split.chars,
+    {
+      x: -120,
+      autoAlpha: 0,
+      duration: 1,
+      stagger: 0.035,
+      ease: "power4.out",
+      delay: 0.5,
+    },
+    "+=0.3"
+  );
+}
+
+//Testimonial Title animation
+function initTestimonialTitle() {
+  const split = SplitText.create("#testimonial-title", {
     type: "chars",
     charsClass: "char",
   });
@@ -336,10 +360,18 @@ function initBookingForm() {
     });
   });
 
+  const loader = document.querySelector(".loading");
+
   // Submit
   document.getElementById("multiStepForm").addEventListener("submit", (e) => {
-    // e.preventDefault();
-    alert("Form submitted successfully!");
+    e.preventDefault();
+    loader.classList.add("active");
+
+    setTimeout(() => {
+      loader.classList.remove("active");
+
+      alert("Thank you! Your booking request for Sjöstugan has been sent.");
+    }, 2000);
   });
 
   updateUI();

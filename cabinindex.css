@@ -214,13 +214,16 @@ https://www.google.com/search?q=partial+frame+border+css&oq=partial+frame+border
   .cabin-icons {
     display: none;
   }
+  #title {
+    margin-top: 16vh;
+  }
 }
 
 @media screen and (max-width: 700px) {
   .cabin-grid {
     display: flex;
     flex-direction: column;
-    padding: 10vw;
+    padding: 5vw;
     row-gap: 10vh;
   }
 
@@ -228,6 +231,7 @@ https://www.google.com/search?q=partial+frame+border+css&oq=partial+frame+border
     display: flex;
     flex-direction: column;
     row-gap: 16px;
+    border-width: 4px;
   }
 
   .cabin:after {
@@ -238,13 +242,14 @@ https://www.google.com/search?q=partial+frame+border+css&oq=partial+frame+border
   }
 
   .cabin-grid h2 {
-    margin-left: 50px;
-    margin-top: -50;
+    margin-left: 30px;
+    margin-top: -50px;
   }
 
   .cabin-image-container {
     margin-left: -5vw;
     width: 100%;
+    aspect-ratio: 4/3;
   }
 
   .cabin-grid h3 {
@@ -252,7 +257,11 @@ https://www.google.com/search?q=partial+frame+border+css&oq=partial+frame+border
   }
 
   .cabin-text {
-    padding: 3vw;
+    padding: 6vw;
     row-gap: 2vh;
+  }
+
+  #title {
+    margin-top: 12vh;
   }
 }

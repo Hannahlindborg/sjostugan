@@ -35,12 +35,6 @@ onPageLoad();
 swup.hooks.on("content:replace", onPageLoad);
 
 function runPageScript() {
-  console.log(
-    "check",
-    window.location.pathname,
-    window.location.pathname == "/index.html"
-  );
-
   if (window.location.pathname == "/index.html") {
     initHomePage();
   } else if (window.location.pathname == "/cabins.html") {
@@ -70,8 +64,6 @@ function initFooterAnimation() {
   const footerContainer = document.querySelector(".footer-content");
   if (!footerContainer) return;
 
-  console.log("Footer element found:", footerContainer);
-
   gsap.fromTo(
     footerContainer,
     {
@@ -87,7 +79,6 @@ function initFooterAnimation() {
         trigger: footerContainer,
         start: "top 80%",
         once: true,
-        markers: true,
       },
     }
   );
@@ -140,7 +131,6 @@ function initHamburgerMenu() {
   }
 
   burger.addEventListener("click", () => {
-    console.log("hamburger clicked");
     open = !open;
 
     morphBurger(open);

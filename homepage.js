@@ -7,6 +7,7 @@ export function initHomePage() {
       initCabinSection();
       initBreakfastSection();
       initExploreSection();
+      initTestimonialTitle();
       initTestimonialSlider();
       initTestimonialTrigger();
     });
@@ -201,6 +202,29 @@ function initExploreSection() {
 }
 
 //Testimonials
+
+//Title animation
+function initTestimonialTitle() {
+  const split = SplitText.create("#testimonial-title", {
+    type: "chars",
+    charsClass: "char",
+  });
+
+  if (!split) return;
+
+  gsap.from(
+    split.chars,
+    {
+      x: -120,
+      autoAlpha: 0,
+      duration: 1,
+      stagger: 0.035,
+      ease: "power4.out",
+      delay: 0.5,
+    },
+    "+=0.3"
+  );
+}
 
 function initTestimonialSlider() {
   const el = document.querySelector(".blaze-slider");

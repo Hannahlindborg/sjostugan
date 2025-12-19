@@ -109,27 +109,24 @@
           <h3 id="message-form-title">Send us a message</h3>
           <form>
             <div class="message-field">
-              <label for="message-name">Full Name</label>
-              <input type="text" id="message-name" name="message-name" />
-              <p class="error-text" id="message-nameError"></p>
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" />
+              <p class="error-text" id="nameError"></p>
             </div>
             <div class="message-field">
-              <label for="message-email">Email</label>
-              <input type="text" id="message-email" name="message-email" />
-              <p class="error-text" id="message-emailError"></p>
+              <label for="email">Email</label>
+              <input type="text" id="email" name="email" />
+              <p class="error-text" id="emailError"></p>
             </div>
             <div class="message-field">
-              <label for="message-message">Message</label>
-              <input
-                type="textarea"
-                id="message-message"
-                name="message-message"
-              />
-              <p class="error-text" id="message-messageError"></p>
+              <label for="message">Message</label>
+              <input type="textarea" id="message" name="message" />
+              <p class="error-text" id="messageError"></p>
             </div>
             <div class="button-container">
               <button type="submit" id="submit-button">Send Message</button>
             </div>
+            <div class="loading"></div>
           </form>
         </div>
       </section>

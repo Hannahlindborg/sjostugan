@@ -211,10 +211,18 @@ function initBookingForm() {
     });
   });
 
+  const loader = document.querySelector(".loading");
+
   // Submit
   document.getElementById("multiStepForm").addEventListener("submit", (e) => {
-    // e.preventDefault();
-    alert("Form submitted successfully!");
+    e.preventDefault();
+    loader.classList.add("active");
+
+    setTimeout(() => {
+      loader.classList.remove("active");
+
+      alert("Thank you! Your booking request for Sjöstugan has been sent.");
+    }, 2000);
   });
 
   updateUI();

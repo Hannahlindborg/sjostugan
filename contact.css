@@ -77,6 +77,11 @@
   width: 60%;
   height: auto;
   justify-self: center;
+  position: relative;
+}
+
+.message-form form {
+  position: relative;
 }
 
 .message-field {

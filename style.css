@@ -6,6 +6,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+  overflow-x: hidden;
 }
 /*
 .lato-thin {
@@ -136,7 +137,8 @@ span {
   height: 100px;
   z-index: 1200;
   padding-top: 10px;
-  align-content: center;
+  padding-left: 16vw;
+  padding-right: 16vw;
   background-color: transparent;
   transition: background-color 0.5s ease-in-out;
 }
@@ -163,8 +165,12 @@ span {
   justify-content: space-between;
   list-style-type: none;
   color: white;
-  padding-left: 16vw;
-  padding-right: 16vw;
+  max-width: 68vw;
+}
+
+.top-menu,
+.top-menu ul {
+  box-sizing: border-box;
 }
 
 .top-menu a {
@@ -187,6 +193,7 @@ span {
   height: 22px;
   position: fixed;
   left: 2rem;
+  top: 2rem;
   display: none;
   cursor: pointer;
   z-index: 1300;
@@ -292,11 +299,6 @@ https://www.w3schools.com/howto/howto_js_slideshow.asp*/
   margin-bottom: 16vh;
 }
 
-.testimonials h3 {
-  display: block;
-  color: #4f728a;
-}
-
 .testimonial-card {
   display: flex;
   flex-direction: column;
@@ -351,13 +353,38 @@ https://www.w3schools.com/howto/howto_js_slideshow.asp*/
 /*https://www.w3schools.com/howto/howto_css_loader.asp*/
 
 .loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.loading.active {
+  display: flex;
+}
+
+.loading::after {
+  content: "";
   border: 8px solid #f3f3f3;
   border-radius: 50%;
   border-top: 8px solid #2f4250;
-  width: 120px;
-  height: 120px;
-  -webkit-animation: spin 2s linear infinite; /* Safari */
-  animation: spin 2s linear infinite;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @-webkit-keyframes spin {
@@ -384,17 +411,16 @@ footer {
   background-image: url(b&b-images/footer-image.jpg);
   background-size: cover;
   background-position: center;
-  height: 40%;
   position: relative;
   z-index: 10;
   margin-top: auto;
+  min-height: 200px;
+  height: auto;
 }
 
 #footer-overlay {
-  background-color: rgb(3, 1, 1);
+  background-color: #03010150;
   position: absolute;
-  opacity: 0.5;
-  top: auto;
   z-index: 0;
   width: 100%;
   height: 100%;
@@ -503,13 +529,11 @@ footer h4 {
     grid-column: 5 / span 6;
   }
 }
-
 @media screen and (max-width: 700px) {
   .footer-information h4 {
     font-size: 1.5rem;
   }
 }
-
 @media screen and (max-width: 550px) {
   .footer-information {
     grid-column: 4 / span 7;
@@ -538,6 +562,7 @@ footer h4 {
   padding: 24px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
   margin-bottom: 16vh;
+  position: relative;
 }
 
 .form-container h2 {
@@ -591,8 +616,8 @@ footer h4 {
 }
 
 .timeline-step.completed .dot {
-  background: #10b981;
-  border-color: #10b981;
+  background: #4c7064;
+  border-color: #4c7064;
 }
 
 .timeline-step.active span,
@@ -735,7 +760,7 @@ button:hover {
   border: 1px solid #e4e4e7;
   border-radius: 12px;
   padding: 16px;
-  background: #fafafa;
+  background: none;
   font-size: 14px;
   display: flex;
   flex-direction: column;
@@ -783,18 +808,6 @@ button:hover {
   .nav-link {
     font-size: 1.1rem;
   }
-
-  #introduction-cursive {
-    font-size: 2rem;
-  }
-
-  #explore-cursive {
-    font-size: 2rem;
-  }
-
-  #hero-title {
-    font-size: 4rem;
-  }
 }
 
 @media screen and (max-width: 700px) {
@@ -821,16 +834,5 @@ button:hover {
 
   .nav-link {
     font-size: 1rem;
-  }
-
-  #introduction-title {
-    font-size: 1.5rem;
-  }
-
-  #explore-title {
-    font-size: 1.5rem;
-  }
-  #hero-title {
-    font-size: 2rem;
   }
 }
