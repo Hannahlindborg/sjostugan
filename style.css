@@ -8,6 +8,7 @@ body {
   height: 100%;
   overflow-x: hidden;
 }
+
 /*
 .lato-thin {
   font-family: "Lato", sans-serif;
@@ -184,6 +185,12 @@ span {
   font-style: normal;
 }
 
+header a {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .top-menu a:hover {
   transform: scale(1.2);
 }
@@ -291,7 +298,6 @@ https://www.w3schools.com/howto/howto_js_slideshow.asp*/
 .testimonials {
   position: relative;
   padding: 20px 20px;
-  background-color: #fff3eb;
   border-radius: 16px;
   margin-left: 3vw;
   margin-right: 3vw;
@@ -305,6 +311,7 @@ https://www.w3schools.com/howto/howto_js_slideshow.asp*/
   align-items: center;
   width: 100%;
   justify-content: center;
+  background-color: rgb(255, 243, 235, 0.8);
 }
 
 .testimonial-user {
@@ -440,7 +447,6 @@ footer {
   align-items: center;
   justify-content: center;
   z-index: 1;
-  padding: 4vh;
 }
 
 footer h4 {
@@ -467,6 +473,8 @@ footer h4 {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+  padding-top: 4vh;
+  padding-bottom: 4vh;
 }
 
 .contact-row {
@@ -530,18 +538,40 @@ footer h4 {
   }
 }
 @media screen and (max-width: 700px) {
+  .footer-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    justify-content: center;
+  }
+
+  .footer-information {
+    grid-column: 1;
+    grid-row: 1;
+    justify-content: space-evenly;
+    padding-top: 4vh;
+  }
+
+  #footer-logo {
+    grid-column: 1;
+    grid-row: 2;
+    width: 30vw;
+    height: auto;
+  }
+
   .footer-information h4 {
     font-size: 1.5rem;
   }
 }
 @media screen and (max-width: 550px) {
-  .footer-information {
-    grid-column: 4 / span 7;
-  }
   .social-icon-container svg {
     width: 20px;
     height: 20px;
     object-fit: cover;
+  }
+
+  #footer-logo {
+    margin-bottom: 2vh;
   }
 }
 
@@ -780,6 +810,98 @@ button:hover {
 .review-value {
   font-weight: 500;
   text-align: right;
+}
+
+@media screen and (max-width: 1050px) {
+  .form-container h2 {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #booking-section {
+    margin-bottom: 8vh;
+  }
+
+  .form-container {
+    max-width: 100%;
+    margin: 2vw;
+    padding: 16px;
+    border-width: 6px;
+    border-radius: 14px;
+  }
+
+  .form-container h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .timeline {
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+
+  .timeline-step {
+    min-width: 56px;
+  }
+
+  .timeline-step span {
+    font-size: 11px;
+  }
+
+  .steps-wrapper {
+    min-height: auto;
+  }
+
+  .field {
+    margin-bottom: 14px;
+  }
+  .steps-wrapper {
+    min-height: auto;
+  }
+
+  .step-panel {
+    position: absolute;
+    margin-bottom: 2vh;
+  }
+
+  .step-panel:not(.active) {
+    display: none;
+  }
+
+  .step-panel.active {
+    display: block;
+    position: relative;
+    transform: none;
+  }
+
+  .review-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .review-value {
+    text-align: left;
+  }
+
+  .nav-buttons {
+    flex-direction: column-reverse;
+    gap: 12px;
+    margin-top: 2vh;
+  }
+
+  #nextBtn,
+  #submitBtn {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  button {
+    width: 100%;
+    padding: 14px;
+    font-size: 15px;
+  }
 }
 
 /*Font-sizes */

@@ -161,6 +161,10 @@
   margin-top: 16vh;
 }
 
+#submit-button:hover {
+  background-color: #cc6e58;
+}
+
 @media screen and (max-width: 900px) {
   .contact-section {
     grid-template-columns: 1fr;
@@ -199,5 +203,11 @@
   }
   .image-gallery {
     margin-top: 8vh;
+  }
+  .message-form {
+    width: 80%;
+  }
+  .button-container {
+    margin-bottom: 3vh;
   }
 }

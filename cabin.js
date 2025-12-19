@@ -6,6 +6,8 @@ export function initCabinPage() {
       initScrollTo();
       initSplitTextBooking();
       initTestimonialTitle();
+      initTestimonialTrigger();
+      initTestimonialSlider();
       initAmenitiesTrigger();
       initBookingForm();
       prefillRoom();
@@ -109,6 +111,52 @@ function initTestimonialTitle() {
     },
     "+=0.3"
   );
+}
+
+function initTestimonialSlider() {
+  const el = document.querySelector(".blaze-slider");
+  if (!el) return;
+
+  new BlazeSlider(el, {
+    all: {
+      enableAutoplay: false,
+      stopAutoplayOnInteraction: true,
+      autoplayInterval: 10000,
+      transitionDuration: 500,
+      enablePagination: true,
+      transitionTimingFunction: "ease",
+      slidesToShow: 2,
+      stopAutoplayOnInteraction: false,
+    },
+    "(max-width: 900px)": {
+      slidesToShow: 2,
+    },
+    "(max-width: 500px)": {
+      slidesToShow: 1,
+    },
+  });
+}
+
+function initTestimonialTrigger() {
+  const testimonialsContainer = document.querySelector(".testimonials");
+  if (!testimonialsContainer) return;
+
+  gsap.set(testimonialsContainer, {
+    opacity: 0,
+    y: 50,
+  });
+
+  gsap.to(testimonialsContainer, {
+    opacity: 1,
+    y: 0,
+    duration: 2,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: testimonialsContainer,
+      start: "top 80%",
+      once: true,
+    },
+  });
 }
 
 //Scroll from booking link to booking form
