@@ -35,25 +35,25 @@ onPageLoad();
 swup.hooks.on("content:replace", onPageLoad);
 
 function runPageScript() {
-  if (window.location.pathname == "/index.html") {
+  if (window.location.pathname == "/index") {
     initHomePage();
-  } else if (window.location.pathname == "/cabins.html") {
+  } else if (window.location.pathname == "/cabins") {
     initCabinIndexPage();
   } else if (
     [
-      "/lillstugan.html",
-      "/storstugan.html",
-      "/björkstugan.html",
-      "/ladan.html",
-      "/torpet.html",
+      "/lillstugan",
+      "/storstugan",
+      "/björkstugan",
+      "/ladan",
+      "/torpet",
     ].includes(window.location.pathname)
   ) {
     initCabinPage();
-  } else if (window.location.pathname == "/contact.html") {
+  } else if (window.location.pathname == "/contact") {
     initContactPage();
-  } else if (window.location.pathname == "/booking.html") {
+  } else if (window.location.pathname == "/booking") {
     initBookingPage();
-  } else if (window.location.pathname == "/about.html") {
+  } else if (window.location.pathname == "/about") {
     initAboutPage();
   }
 }
