@@ -230,8 +230,6 @@ function initBookingForm() {
   const nextBtn = document.getElementById("nextBtn");
   const submitBtn = document.getElementById("submitBtn");
 
-  if (!steps || !timelineSteps || !prevBtn || !nextBtn || !submitBtn) return;
-
   let currentStep = 0;
 
   function updateUI() {
@@ -408,16 +406,27 @@ function initBookingForm() {
   // Submit
   document.getElementById("multiStepForm").addEventListener("submit", (e) => {
     e.preventDefault();
+
     loader.classList.add("active");
 
-    setTimeout(() => {
-      loader.classList.remove("active");
+    const myForm = e.target;
+    const formData = new FormData(myForm);
 
-      alert("Thank you! Your booking request for Sjöstugan has been sent.");
-    }, 2000);
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => {
+        loader.classList.remove("active");
+        alert("Thank you! Your booking request for Sjöstugan has been sent.");
+      })
+      .catch((error) => {
+        loader.classList.remove("active");
+        alert("Submission error: " + error);
+      });
+    updateUI();
   });
-
-  updateUI();
 }
 
 // Prefill room selection

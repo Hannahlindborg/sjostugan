@@ -88,7 +88,8 @@
               </div>
             </div>
 
-            <form id="multiStepForm" name="contact" netlify>
+            <form id="multiStepForm" name="booking" netlify>
+              <input type="hidden" name="form-name" value="booking" />
               <div class="steps-wrapper">
                 <!-- Step 1 -->
                 <div class="step-panel active" data-step="0">
@@ -96,25 +97,25 @@
 
                   <div class="field">
                     <label for="name">Full Name</label>
-                    <input type="text" id="name" />
+                    <input type="text" id="name" name="name" />
                     <p class="error-text" id="nameError"></p>
                   </div>
 
                   <div class="field">
                     <label for="email">Email</label>
-                    <input type="email" id="email" />
+                    <input type="email" id="email" name="email" />
                     <p class="error-text" id="emailError"></p>
                   </div>
 
                   <div class="field">
                     <label for="address">Address</label>
-                    <input type="text" id="address" />
+                    <input type="text" id="address" name="address" />
                     <p class="error-text" id="addressError"></p>
                   </div>
 
                   <div class="field">
                     <label for="phone">Phone</label>
-                    <input type="tel" id="phone" />
+                    <input type="tel" id="phone" name="phone" />
                     <p class="error-text" id="phoneError"></p>
                   </div>
                 </div>
@@ -160,13 +161,17 @@
 
                   <div class="field">
                     <label for="arrival-date">Arrival Date</label>
-                    <input type="date" id="arrival-date" />
+                    <input type="date" id="arrival-date" name="arrival-date" />
                     <p class="error-text" id="arrival-date-Error"></p>
                   </div>
 
                   <div class="field">
                     <label for="departure-date">Departure date</label>
-                    <input type="date" id="departure-date" />
+                    <input
+                      type="date"
+                      id="departure-date"
+                      name="departure-date"
+                    />
                     <p class="error-text" id="departure-date-Error"></p>
                   </div>
                 </div>
@@ -177,7 +182,7 @@
 
                   <div class="field">
                     <label for="notes">Message for sjöstugan</label>
-                    <textarea id="notes" rows="4"></textarea>
+                    <textarea id="notes" rows="4" name="message"></textarea>
                   </div>
                 </div>
 
@@ -232,7 +237,11 @@
     <footer id="footer-container">
       <div id="footer-overlay"></div>
       <div class="footer-content">
-        <img id="footer-logo" src="b&b-images/graphics/SVG/Asset 1.svg" alt=""/>
+        <img
+          id="footer-logo"
+          src="b&b-images/graphics/SVG/Asset 1.svg"
+          alt=""
+        />
         <div class="footer-information">
           <div class="contact-row">
             <h4>Contact us</h4>
