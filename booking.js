@@ -24,7 +24,6 @@ function initSplitText() {
       duration: 1,
       stagger: 0.035,
       ease: "power4.out",
-      delay: 0.5,
     },
     "+=0.3"
   );

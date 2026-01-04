@@ -32,7 +32,6 @@ function initSplitText() {
       duration: 1,
       stagger: 0.035,
       ease: "power4.out",
-      delay: 0.5,
     },
     "+=0.3"
   );
@@ -107,7 +106,6 @@ function initTestimonialTitle() {
       duration: 1,
       stagger: 0.035,
       ease: "power4.out",
-      delay: 0.5,
     },
     "+=0.3"
   );
@@ -129,9 +127,6 @@ function initTestimonialSlider() {
       stopAutoplayOnInteraction: false,
     },
     "(max-width: 900px)": {
-      slidesToShow: 2,
-    },
-    "(max-width: 500px)": {
       slidesToShow: 1,
     },
   });

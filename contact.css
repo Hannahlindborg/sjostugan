@@ -70,7 +70,7 @@
 }
 
 .message-form {
-  border: 6px solid #67372b;
+  border: 4px solid #67372b;
   border-radius: 16px;
   background-color: #fff3eb;
   padding: 2vw;
@@ -206,6 +206,7 @@
   }
   .message-form {
     width: 80%;
+    border-width: 2px;
   }
   .button-container {
     margin-bottom: 3vh;
