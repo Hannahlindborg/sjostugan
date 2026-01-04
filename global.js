@@ -35,7 +35,10 @@ onPageLoad();
 swup.hooks.on("content:replace", onPageLoad);
 
 function runPageScript() {
-  if (window.location.pathname == "/index") {
+  if (
+    window.location.pathname === "/" ||
+    window.location.pathname.includes("index")
+  ) {
     initHomePage();
   } else if (window.location.pathname == "/cabins") {
     initCabinIndexPage();
